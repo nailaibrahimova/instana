@@ -17,6 +17,8 @@ import (
 	_nethttp "net/http"
 	_neturl "net/url"
 	"strings"
+
+	_log "github.com/sirupsen/logrus"
 )
 
 // Linger please
@@ -364,6 +366,11 @@ func (a *CustomDashboardsApiService) GetCustomDashboards(ctx _context.Context) (
 	if err != nil {
 		return localVarReturnValue, nil, err
 	}
+
+	_log.Infof("Dashboard request header: %+v", r.Header)
+	_log.Infof("Dashboard request body: %+v", r.Body)
+	_log.Infof("Dashboard request method: %+v", r.Method)
+	_log.Infof("Dashboard request url: %+v", r.URL)
 
 	localVarHTTPResponse, err := a.client.callAPI(r)
 	if err != nil || localVarHTTPResponse == nil {
