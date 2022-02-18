@@ -19,8 +19,8 @@ type GetEndpoints struct {
 	ExcludeSynthetic         bool                         `json:"excludeSynthetic,omitempty"`
 	Metrics                  []AppDataMetricConfiguration `json:"metrics"`
 	NameFilter               string                       `json:"nameFilter,omitempty"`
-	Order                    Order                        `json:"order,omitempty"`
-	Pagination               Pagination                   `json:"pagination,omitempty"`
-	ServiceId                string                       `json:"serviceId,omitempty"`
-	TimeFrame                TimeFrame                    `json:"timeFrame,omitempty"`
+	//Order                    Order                        `json:"order,omitempty"`
+	Pagination Pagination `json:"pagination,omitempty"`
+	ServiceId  string     `json:"serviceId,omitempty"`
+	TimeFrame  TimeFrame  `json:"timeFrame,omitempty"`
 }
