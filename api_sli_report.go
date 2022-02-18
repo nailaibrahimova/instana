@@ -42,7 +42,7 @@ GetSli Generate SLI report
  * @param "Slo" (optional.Float64) -
  * @param "From" (optional.Int64) -
  * @param "To" (optional.Int64) -
-@return []SliReport
+@return SliReport
 */
 func (a *SLIReportApiService) GetSli(ctx _context.Context, sliId string, localVarOptionals *GetSliOpts) (SliReport, *_nethttp.Response, error) {
 	var (

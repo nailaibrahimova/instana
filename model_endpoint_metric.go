@@ -10,8 +10,28 @@
 
 package instana
 
-// EndpointItem struct for EndpointItem
-type EndpointItem struct {
-	Endpoint Endpoint       `json:"endpoint"`
-	Metrics  EndpointMetric `json:"metrics"`
+type EndpointMetric struct {
+	CallsSum                  [][]float64 `json:"calls.sum"`
+	LatencyMean               [][]float64 `json:"latency.mean"`
+	ErroneousCallsSum         [][]float64 `json:"erroneousCalls.sum"`
+	LatencyP90                [][]float64 `json:"latency.p90"`
+	LatencyP25                [][]float64 `json:"latency.p25"`
+	LatencyP99                [][]float64 `json:"latency.p99"`
+	LatencySum                [][]float64 `json:"latency.sum"`
+	LatencyP98                [][]float64 `json:"latency.p98"`
+	LatencyP50                [][]float64 `json:"latency.p50"`
+	LatencyMin                [][]float64 `json:"latency.min"`
+	LatencyP95                [][]float64 `json:"latency.p95"`
+	LatencyP75                [][]float64 `json:"latency.p75"`
+	LatencyMax                [][]float64 `json:"latency.max"`
+	ErrorsMean                [][]float64 `json:"errors.mean"`
+	TracesSum                 [][]float64 `json:"traces.sum"`
+	ApplicationsDistinctCount [][]float64 `json:"applications.distinct_count"`
+	ServicesDistinctCount     [][]float64 `json:"services.distinct_count"`
+	EndpointsDistinctCount    [][]float64 `json:"endpoints.distinct_count"`
+	HTTP1XxSum                [][]float64 `json:"http.1xx.sum"`
+	HTTP2XxSum                [][]float64 `json:"http.2xx.sum"`
+	HTTP3XxSum                [][]float64 `json:"http.3xx.sum"`
+	HTTP4XxSum                [][]float64 `json:"http.4xx.sum"`
+	HTTP5XxSum                [][]float64 `json:"http.5xx.sum"`
 }
