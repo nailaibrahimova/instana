@@ -28,9 +28,10 @@ type GroupsApiService service
 
 /*
 AddPermissionsOnGroup Add permissions to group
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param groupId
- * @param body
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param groupId
+  - @param body
+
 @return ApiGroup
 */
 func (a *GroupsApiService) AddPermissionsOnGroup(ctx _context.Context, groupId string, body string) (ApiGroup, *_nethttp.Response, error) {
@@ -127,9 +128,10 @@ func (a *GroupsApiService) AddPermissionsOnGroup(ctx _context.Context, groupId s
 
 /*
 AddUsersToGroup Add users to group
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param groupId
- * @param body
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param groupId
+  - @param body
+
 @return ApiGroup
 */
 func (a *GroupsApiService) AddUsersToGroup(ctx _context.Context, groupId string, body string) (ApiGroup, *_nethttp.Response, error) {
@@ -226,8 +228,9 @@ func (a *GroupsApiService) AddUsersToGroup(ctx _context.Context, groupId string,
 
 /*
 CreateGroup Create group
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param apiGroup
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param apiGroup
+
 @return ApiGroup
 */
 func (a *GroupsApiService) CreateGroup(ctx _context.Context, apiGroup ApiGroup) (ApiGroup, *_nethttp.Response, error) {
@@ -322,8 +325,8 @@ func (a *GroupsApiService) CreateGroup(ctx _context.Context, apiGroup ApiGroup) 
 
 /*
 DeleteGroup Delete group
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *GroupsApiService) DeleteGroup(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -400,8 +403,9 @@ func (a *GroupsApiService) DeleteGroup(ctx _context.Context, id string) (*_netht
 
 /*
 GetGroup Get group
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return ApiGroup
 */
 func (a *GroupsApiService) GetGroup(ctx _context.Context, id string) (ApiGroup, *_nethttp.Response, error) {
@@ -496,7 +500,8 @@ func (a *GroupsApiService) GetGroup(ctx _context.Context, id string) (ApiGroup, 
 
 /*
 GetGroups Get groups
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []ApiGroup
 */
 func (a *GroupsApiService) GetGroups(ctx _context.Context) ([]ApiGroup, *_nethttp.Response, error) {
@@ -589,8 +594,9 @@ func (a *GroupsApiService) GetGroups(ctx _context.Context) ([]ApiGroup, *_nethtt
 
 /*
 GetGroupsByUser Get groups of a single user
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param email
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param email
+
 @return []ApiGroup
 */
 func (a *GroupsApiService) GetGroupsByUser(ctx _context.Context, email string) ([]ApiGroup, *_nethttp.Response, error) {
@@ -685,9 +691,10 @@ func (a *GroupsApiService) GetGroupsByUser(ctx _context.Context, email string) (
 
 /*
 UpdateGroup Update group
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param apiGroup
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param apiGroup
+
 @return ApiGroup
 */
 func (a *GroupsApiService) UpdateGroup(ctx _context.Context, id string, apiGroup ApiGroup) (ApiGroup, *_nethttp.Response, error) {

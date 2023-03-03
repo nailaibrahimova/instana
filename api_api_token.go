@@ -28,8 +28,8 @@ type APITokenApiService service
 
 /*
 DeleteApiToken Delete API token
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param internalId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param internalId
 */
 func (a *APITokenApiService) DeleteApiToken(ctx _context.Context, internalId string) (*_nethttp.Response, error) {
 	var (
@@ -106,8 +106,9 @@ func (a *APITokenApiService) DeleteApiToken(ctx _context.Context, internalId str
 
 /*
 GetApiToken API token
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param internalId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param internalId
+
 @return ApiToken
 */
 func (a *APITokenApiService) GetApiToken(ctx _context.Context, internalId string) (ApiToken, *_nethttp.Response, error) {
@@ -202,7 +203,8 @@ func (a *APITokenApiService) GetApiToken(ctx _context.Context, internalId string
 
 /*
 GetApiTokens All API tokens
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []ApiToken
 */
 func (a *APITokenApiService) GetApiTokens(ctx _context.Context) ([]ApiToken, *_nethttp.Response, error) {
@@ -295,8 +297,9 @@ func (a *APITokenApiService) GetApiTokens(ctx _context.Context) ([]ApiToken, *_n
 
 /*
 PostApiToken Create an API token
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param apiToken
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param apiToken
+
 @return ApiToken
 */
 func (a *APITokenApiService) PostApiToken(ctx _context.Context, apiToken ApiToken) (ApiToken, *_nethttp.Response, error) {
@@ -391,9 +394,10 @@ func (a *APITokenApiService) PostApiToken(ctx _context.Context, apiToken ApiToke
 
 /*
 PutApiToken Create or update an API token
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param internalId
- * @param apiToken
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param internalId
+  - @param apiToken
+
 @return ApiToken
 */
 func (a *APITokenApiService) PutApiToken(ctx _context.Context, internalId string, apiToken ApiToken) (ApiToken, *_nethttp.Response, error) {

@@ -29,8 +29,9 @@ type ApplicationSettingsApiService service
 /*
 AddApplicationConfig Add application configuration
 Create a new Application Perspective.  ## Deprecated Parameters **matchSpecification:** A binary tree sturcture of match expression connected with binary operator AND or OR. It is replaced by **tagFilterExpression** which is also used in Application Analyze API endpoints.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param newApplicationConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param newApplicationConfig
+
 @return ApplicationConfig
 */
 func (a *ApplicationSettingsApiService) AddApplicationConfig(ctx _context.Context, newApplicationConfig NewApplicationConfig) (ApplicationConfig, *_nethttp.Response, error) {
@@ -126,8 +127,9 @@ func (a *ApplicationSettingsApiService) AddApplicationConfig(ctx _context.Contex
 /*
 AddManualServiceConfig Add manual service configuration
 Add a manual service configuration.  **This is an experimental endpoint to workaround service mapping issues.**  ### Mandatory Parameters:  **tagFilterExpression** A tag filter expression to match calls on which the manual service configuration will be applied. Only call tags are allowed in the expression.  ### Optional Parameters: **unmonitoredServiceName** Specify a service name if you want to map calls to an unmonitored service.  **existingServiceId** Specify a service id if you want to map calls to an existing service.  **description** A description of the configuration.  **enabled** Enable or disable the configuration.  Note: Either unmonitoredServiceName or existingServiceId should be specified in a configuration.  ### Defaults **enabled** &#x60;true&#x60;
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param newManualServiceConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param newManualServiceConfig
+
 @return ManualServiceConfig
 */
 func (a *ApplicationSettingsApiService) AddManualServiceConfig(ctx _context.Context, newManualServiceConfig NewManualServiceConfig) (ManualServiceConfig, *_nethttp.Response, error) {
@@ -222,8 +224,9 @@ func (a *ApplicationSettingsApiService) AddManualServiceConfig(ctx _context.Cont
 
 /*
 AddServiceConfig Add service configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param serviceConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param serviceConfig
+
 @return ServiceConfig
 */
 func (a *ApplicationSettingsApiService) AddServiceConfig(ctx _context.Context, serviceConfig ServiceConfig) (ServiceConfig, *_nethttp.Response, error) {
@@ -318,8 +321,9 @@ func (a *ApplicationSettingsApiService) AddServiceConfig(ctx _context.Context, s
 
 /*
 CreateEndpointConfig Create endpoint configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param httpEndpointConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param httpEndpointConfig
+
 @return HttpEndpointConfig
 */
 func (a *ApplicationSettingsApiService) CreateEndpointConfig(ctx _context.Context, httpEndpointConfig HttpEndpointConfig) (HttpEndpointConfig, *_nethttp.Response, error) {
@@ -414,8 +418,8 @@ func (a *ApplicationSettingsApiService) CreateEndpointConfig(ctx _context.Contex
 
 /*
 DeleteApplicationConfig Delete application configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *ApplicationSettingsApiService) DeleteApplicationConfig(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -492,8 +496,8 @@ func (a *ApplicationSettingsApiService) DeleteApplicationConfig(ctx _context.Con
 
 /*
 DeleteEndpointConfig Delete endpoint configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *ApplicationSettingsApiService) DeleteEndpointConfig(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -571,8 +575,8 @@ func (a *ApplicationSettingsApiService) DeleteEndpointConfig(ctx _context.Contex
 /*
 DeleteManualServiceConfig Delete manual service configuration
 Delete a manual service configuration.  **This is an experimental endpoint to workaround service mapping issues.**
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *ApplicationSettingsApiService) DeleteManualServiceConfig(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -649,8 +653,8 @@ func (a *ApplicationSettingsApiService) DeleteManualServiceConfig(ctx _context.C
 
 /*
 DeleteServiceConfig Delete service configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *ApplicationSettingsApiService) DeleteServiceConfig(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -728,7 +732,8 @@ func (a *ApplicationSettingsApiService) DeleteServiceConfig(ctx _context.Context
 /*
 GetAllManualServiceConfigs All manual service configurations
 Get all manual service configurations.  **This is an experimental endpoint to workaround service mapping issues.**
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []ManualServiceConfig
 */
 func (a *ApplicationSettingsApiService) GetAllManualServiceConfigs(ctx _context.Context) ([]ManualServiceConfig, *_nethttp.Response, error) {
@@ -821,8 +826,9 @@ func (a *ApplicationSettingsApiService) GetAllManualServiceConfigs(ctx _context.
 
 /*
 GetApplicationConfig Application configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return ApplicationConfig
 */
 func (a *ApplicationSettingsApiService) GetApplicationConfig(ctx _context.Context, id string) (ApplicationConfig, *_nethttp.Response, error) {
@@ -917,7 +923,8 @@ func (a *ApplicationSettingsApiService) GetApplicationConfig(ctx _context.Contex
 
 /*
 GetApplicationConfigs All Application configurations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []ApplicationConfig
 */
 func (a *ApplicationSettingsApiService) GetApplicationConfigs(ctx _context.Context) ([]ApplicationConfig, *_nethttp.Response, error) {
@@ -1010,8 +1017,9 @@ func (a *ApplicationSettingsApiService) GetApplicationConfigs(ctx _context.Conte
 
 /*
 GetEndpointConfig Endpoint configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return HttpEndpointConfig
 */
 func (a *ApplicationSettingsApiService) GetEndpointConfig(ctx _context.Context, id string) (HttpEndpointConfig, *_nethttp.Response, error) {
@@ -1106,7 +1114,8 @@ func (a *ApplicationSettingsApiService) GetEndpointConfig(ctx _context.Context, 
 
 /*
 GetEndpointConfigs All Endpoint configurations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []HttpEndpointConfig
 */
 func (a *ApplicationSettingsApiService) GetEndpointConfigs(ctx _context.Context) ([]HttpEndpointConfig, *_nethttp.Response, error) {
@@ -1199,8 +1208,9 @@ func (a *ApplicationSettingsApiService) GetEndpointConfigs(ctx _context.Context)
 
 /*
 GetServiceConfig Service configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return ServiceConfig
 */
 func (a *ApplicationSettingsApiService) GetServiceConfig(ctx _context.Context, id string) (ServiceConfig, *_nethttp.Response, error) {
@@ -1295,7 +1305,8 @@ func (a *ApplicationSettingsApiService) GetServiceConfig(ctx _context.Context, i
 
 /*
 GetServiceConfigs All service configurations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []ServiceConfig
 */
 func (a *ApplicationSettingsApiService) GetServiceConfigs(ctx _context.Context) ([]ServiceConfig, *_nethttp.Response, error) {
@@ -1388,8 +1399,8 @@ func (a *ApplicationSettingsApiService) GetServiceConfigs(ctx _context.Context) 
 
 /*
 OrderServiceConfig Order of service configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param requestBody
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param requestBody
 */
 func (a *ApplicationSettingsApiService) OrderServiceConfig(ctx _context.Context, requestBody []string) (*_nethttp.Response, error) {
 	var (
@@ -1467,9 +1478,10 @@ func (a *ApplicationSettingsApiService) OrderServiceConfig(ctx _context.Context,
 /*
 PutApplicationConfig Update application configuration
 Update an existing Application Perspective.  ## Deprecated Parameters **matchSpecification:** A binary tree sturcture of match expression connected with binary operator AND or OR. It is replaced by **tagFilterExpression** which is also used in Application Analyze API endpoints.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param applicationConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param applicationConfig
+
 @return ApplicationConfig
 */
 func (a *ApplicationSettingsApiService) PutApplicationConfig(ctx _context.Context, id string, applicationConfig ApplicationConfig) (ApplicationConfig, *_nethttp.Response, error) {
@@ -1566,9 +1578,10 @@ func (a *ApplicationSettingsApiService) PutApplicationConfig(ctx _context.Contex
 
 /*
 PutServiceConfig Update service configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param serviceConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param serviceConfig
+
 @return ServiceConfig
 */
 func (a *ApplicationSettingsApiService) PutServiceConfig(ctx _context.Context, id string, serviceConfig ServiceConfig) (ServiceConfig, *_nethttp.Response, error) {
@@ -1665,8 +1678,9 @@ func (a *ApplicationSettingsApiService) PutServiceConfig(ctx _context.Context, i
 
 /*
 ReplaceAll Replace all service configurations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param serviceConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param serviceConfig
+
 @return []ServiceConfig
 */
 func (a *ApplicationSettingsApiService) ReplaceAll(ctx _context.Context, serviceConfig []ServiceConfig) ([]ServiceConfig, *_nethttp.Response, error) {
@@ -1762,8 +1776,9 @@ func (a *ApplicationSettingsApiService) ReplaceAll(ctx _context.Context, service
 /*
 ReplaceAllManualServiceConfigs Replace all manual service configurations
 Replace all manual service configurations.  **This is an experimental endpoint to workaround service mapping issues.**  ### Mandatory Parameters:  **tagFilterExpression** A tag filter expression to match calls on which the manual service configuration will be applied. Only call tags are allowed in the expression.  ### Optional Parameters: **unmonitoredServiceName** Specify a service name if you want to map calls to an unmonitored service.  **existingServiceId** Specify a service id if you want to map calls to an existing service.  **description** A description of the configuration.  **enabled** Enable or disable the configuration.  Note: Either unmonitoredServiceName or existingServiceId should be specified in a configuration.  ### Defaults **enabled** &#x60;true&#x60;
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param newManualServiceConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param newManualServiceConfig
+
 @return []ManualServiceConfig
 */
 func (a *ApplicationSettingsApiService) ReplaceAllManualServiceConfigs(ctx _context.Context, newManualServiceConfig []NewManualServiceConfig) ([]ManualServiceConfig, *_nethttp.Response, error) {
@@ -1858,9 +1873,10 @@ func (a *ApplicationSettingsApiService) ReplaceAllManualServiceConfigs(ctx _cont
 
 /*
 UpdateEndpointConfig Update endpoint configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param httpEndpointConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param httpEndpointConfig
+
 @return HttpEndpointConfig
 */
 func (a *ApplicationSettingsApiService) UpdateEndpointConfig(ctx _context.Context, id string, httpEndpointConfig HttpEndpointConfig) (HttpEndpointConfig, *_nethttp.Response, error) {
@@ -1958,9 +1974,10 @@ func (a *ApplicationSettingsApiService) UpdateEndpointConfig(ctx _context.Contex
 /*
 UpdateManualServiceConfig Update manual service configuration
 Update a manual service configuration.  **This is an experimental endpoint to workaround service mapping issues.**  ### Mandatory Parameters:  **tagFilterExpression** A tag filter expression to match calls on which the manual service configuration will be applied. Only call tags are allowed in the expression.  ### Optional Parameters: **unmonitoredServiceName** Specify a service name if you want to map calls to an unmonitored service.  **existingServiceId** Specify a service id if you want to map calls to an existing service.  **description** A description of the configuration.  **enabled** Enable or disable the configuration.  Note: Either unmonitoredServiceName or existingServiceId should be specified in a configuration.  ### Defaults **enabled** &#x60;true&#x60;
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param manualServiceConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param manualServiceConfig
+
 @return ManualServiceConfig
 */
 func (a *ApplicationSettingsApiService) UpdateManualServiceConfig(ctx _context.Context, id string, manualServiceConfig ManualServiceConfig) (ManualServiceConfig, *_nethttp.Response, error) {

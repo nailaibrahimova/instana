@@ -36,10 +36,11 @@ type GetInfrastructureMetricsOpts struct {
 /*
 GetInfrastructureMetrics Get infrastructure metrics
 - The **offline** parameter is used to allow deeper visibility into snapshots. Set to &#x60;false&#x60;, the query will return all snapshots that are still available on the given **to** timestamp. However, set to &#x60;true&#x60;, the query will return all snapshots that have been active within the time window, this must at least include the online result and snapshots terminated within this time.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetInfrastructureMetricsOpts - Optional Parameters:
- * @param "Offline" (optional.Bool) -
- * @param "GetCombinedMetrics" (optional.Interface of GetCombinedMetrics) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetInfrastructureMetricsOpts - Optional Parameters:
+  - @param "Offline" (optional.Bool) -
+  - @param "GetCombinedMetrics" (optional.Interface of GetCombinedMetrics) -
+
 @return InfrastructureMetricResult
 */
 func (a *InfrastructureMetricsApiService) GetInfrastructureMetrics(ctx _context.Context, localVarOptionals *GetInfrastructureMetricsOpts) (InfrastructureMetricResult, *_nethttp.Response, error) {
@@ -150,11 +151,12 @@ type GetSnapshotOpts struct {
 
 /*
 GetSnapshot Get snapshot details
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *GetSnapshotOpts - Optional Parameters:
- * @param "To" (optional.Int64) -
- * @param "WindowSize" (optional.Int64) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *GetSnapshotOpts - Optional Parameters:
+  - @param "To" (optional.Int64) -
+  - @param "WindowSize" (optional.Int64) -
+
 @return SnapshotItem
 */
 func (a *InfrastructureMetricsApiService) GetSnapshot(ctx _context.Context, id string, localVarOptionals *GetSnapshotOpts) (SnapshotItem, *_nethttp.Response, error) {
@@ -266,14 +268,15 @@ type GetSnapshotsOpts struct {
 /*
 GetSnapshots Search snapshots
 These APIs can be used to retrieve information about hosts, processes, JVMs and other entities that we are calling snapshots. A snapshot represents static information about an entity as it was at a specific point in time. To clarify:  **Static information** is any information which is seldom changing, e.g. process IDs, host FQDNs or a list of host hard disks. The counterpart to static information are metrics which have a much higher change rate, e.g. host CPU usage or JVM garbage collection activity. Snapshots only contain static information.  - Snapshots are **versioned** and represent an entity&#39;s state for a specific point in time. While snapshots only contain static information, even that information may change. For example you may add another hard disk to a server. For such a change, a new snapshot would be created.  - The **size** parameter can be used in order to limit the maximum number of retrieved snapshots.  - The **offline** parameter is used to allow deeper visibility into snapshots. Set to &#x60;false&#x60;, the query will return all snapshots that are still available on the given **to** timestamp. However, set to &#x60;true&#x60;, the query will return all snapshots that have been active within the time window, this must at least include the online result and snapshots terminated within this time.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetSnapshotsOpts - Optional Parameters:
- * @param "Query" (optional.String) -
- * @param "To" (optional.Int64) -
- * @param "WindowSize" (optional.Int64) -
- * @param "Size" (optional.Int32) -
- * @param "Plugin" (optional.String) -
- * @param "Offline" (optional.Bool) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetSnapshotsOpts - Optional Parameters:
+  - @param "Query" (optional.String) -
+  - @param "To" (optional.Int64) -
+  - @param "WindowSize" (optional.Int64) -
+  - @param "Size" (optional.Int32) -
+  - @param "Plugin" (optional.String) -
+  - @param "Offline" (optional.Bool) -
+
 @return SnapshotResult
 */
 func (a *InfrastructureMetricsApiService) GetSnapshots(ctx _context.Context, localVarOptionals *GetSnapshotsOpts) (SnapshotResult, *_nethttp.Response, error) {

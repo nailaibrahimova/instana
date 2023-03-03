@@ -29,8 +29,8 @@ type WebsiteConfigurationApiService service
 
 /*
 Delete1 Remove website
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param websiteId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param websiteId
 */
 func (a *WebsiteConfigurationApiService) Delete1(ctx _context.Context, websiteId string) (*_nethttp.Response, error) {
 	var (
@@ -107,8 +107,9 @@ func (a *WebsiteConfigurationApiService) Delete1(ctx _context.Context, websiteId
 
 /*
 Get Get configured website
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param websiteId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param websiteId
+
 @return Website
 */
 func (a *WebsiteConfigurationApiService) Get(ctx _context.Context, websiteId string) (Website, *_nethttp.Response, error) {
@@ -191,7 +192,8 @@ func (a *WebsiteConfigurationApiService) Get(ctx _context.Context, websiteId str
 
 /*
 GetWebsites Get configured websites
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []Website
 */
 func (a *WebsiteConfigurationApiService) GetWebsites(ctx _context.Context) ([]Website, *_nethttp.Response, error) {
@@ -277,9 +279,10 @@ type PostOpts struct {
 
 /*
 Post Configure new website
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *PostOpts - Optional Parameters:
- * @param "Name" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *PostOpts - Optional Parameters:
+  - @param "Name" (optional.String) -
+
 @return Website
 */
 func (a *WebsiteConfigurationApiService) Post(ctx _context.Context, localVarOptionals *PostOpts) (Website, *_nethttp.Response, error) {
@@ -373,10 +376,11 @@ type RenameOpts struct {
 
 /*
 Rename Rename website
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param websiteId
- * @param optional nil or *RenameOpts - Optional Parameters:
- * @param "Name" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param websiteId
+  - @param optional nil or *RenameOpts - Optional Parameters:
+  - @param "Name" (optional.String) -
+
 @return Website
 */
 func (a *WebsiteConfigurationApiService) Rename(ctx _context.Context, websiteId string, localVarOptionals *RenameOpts) (Website, *_nethttp.Response, error) {

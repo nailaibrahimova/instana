@@ -34,9 +34,10 @@ type GetBeaconMetricsOpts struct {
 
 /*
 GetBeaconMetrics Get beacon metrics
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetBeaconMetricsOpts - Optional Parameters:
- * @param "GetWebsiteMetrics" (optional.Interface of GetWebsiteMetrics) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetBeaconMetricsOpts - Optional Parameters:
+  - @param "GetWebsiteMetrics" (optional.Interface of GetWebsiteMetrics) -
+
 @return WebsiteMetricResult
 */
 func (a *WebsiteMetricsApiService) GetBeaconMetrics(ctx _context.Context, localVarOptionals *GetBeaconMetricsOpts) (WebsiteMetricResult, *_nethttp.Response, error) {
@@ -138,9 +139,10 @@ func (a *WebsiteMetricsApiService) GetBeaconMetrics(ctx _context.Context, localV
 
 /*
 GetPageLoad Get page load
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param timestamp
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param timestamp
+
 @return []WebsiteMonitoringBeacon
 */
 func (a *WebsiteMetricsApiService) GetPageLoad(ctx _context.Context, id string, timestamp int64) ([]WebsiteMonitoringBeacon, *_nethttp.Response, error) {

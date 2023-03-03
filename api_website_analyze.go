@@ -34,10 +34,11 @@ type GetBeaconGroupsOpts struct {
 
 /*
 GetBeaconGroups Get grouped beacon metrics
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetBeaconGroupsOpts - Optional Parameters:
- * @param "FillTimeSeries" (optional.Bool) -
- * @param "GetWebsiteBeaconGroups" (optional.Interface of GetWebsiteBeaconGroups) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetBeaconGroupsOpts - Optional Parameters:
+  - @param "FillTimeSeries" (optional.Bool) -
+  - @param "GetWebsiteBeaconGroups" (optional.Interface of GetWebsiteBeaconGroups) -
+
 @return BeaconGroupsResult
 */
 func (a *WebsiteAnalyzeApiService) GetBeaconGroups(ctx _context.Context, localVarOptionals *GetBeaconGroupsOpts) (BeaconGroupsResult, *_nethttp.Response, error) {
@@ -147,9 +148,10 @@ type GetBeaconsOpts struct {
 
 /*
 GetBeacons Get all beacons
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetBeaconsOpts - Optional Parameters:
- * @param "GetWebsiteBeacons" (optional.Interface of GetWebsiteBeacons) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetBeaconsOpts - Optional Parameters:
+  - @param "GetWebsiteBeacons" (optional.Interface of GetWebsiteBeacons) -
+
 @return BeaconResult
 */
 func (a *WebsiteAnalyzeApiService) GetBeacons(ctx _context.Context, localVarOptionals *GetBeaconsOpts) (BeaconResult, *_nethttp.Response, error) {

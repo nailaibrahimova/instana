@@ -41,16 +41,17 @@ type ApplicationResourcesEndpointsOpts struct {
 
 /*
 ApplicationResourcesEndpoints Get endpoints
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *ApplicationResourcesEndpointsOpts - Optional Parameters:
- * @param "NameFilter" (optional.String) -
- * @param "Types" (optional.Interface of []string) -
- * @param "Technologies" (optional.Interface of []string) -
- * @param "WindowSize" (optional.Int64) -
- * @param "To" (optional.Int64) -
- * @param "Page" (optional.Int32) -
- * @param "PageSize" (optional.Int32) -
- * @param "ApplicationBoundaryScope" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *ApplicationResourcesEndpointsOpts - Optional Parameters:
+  - @param "NameFilter" (optional.String) -
+  - @param "Types" (optional.Interface of []string) -
+  - @param "Technologies" (optional.Interface of []string) -
+  - @param "WindowSize" (optional.Int64) -
+  - @param "To" (optional.Int64) -
+  - @param "Page" (optional.Int32) -
+  - @param "PageSize" (optional.Int32) -
+  - @param "ApplicationBoundaryScope" (optional.String) -
+
 @return EndpointResult
 */
 func (a *ApplicationResourcesApiService) ApplicationResourcesEndpoints(ctx _context.Context, localVarOptionals *ApplicationResourcesEndpointsOpts) (EndpointResult, *_nethttp.Response, error) {
@@ -193,14 +194,15 @@ type GetApplicationServicesOpts struct {
 
 /*
 GetApplicationServices Get applications/services
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetApplicationServicesOpts - Optional Parameters:
- * @param "NameFilter" (optional.String) -
- * @param "WindowSize" (optional.Int64) -
- * @param "To" (optional.Int64) -
- * @param "Page" (optional.Int32) -
- * @param "PageSize" (optional.Int32) -
- * @param "ApplicationBoundaryScope" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetApplicationServicesOpts - Optional Parameters:
+  - @param "NameFilter" (optional.String) -
+  - @param "WindowSize" (optional.Int64) -
+  - @param "To" (optional.Int64) -
+  - @param "Page" (optional.Int32) -
+  - @param "PageSize" (optional.Int32) -
+  - @param "ApplicationBoundaryScope" (optional.String) -
+
 @return ServiceResult
 */
 func (a *ApplicationResourcesApiService) GetApplicationServices(ctx _context.Context, localVarOptionals *GetApplicationServicesOpts) (ServiceResult, *_nethttp.Response, error) {
@@ -321,14 +323,15 @@ type GetApplicationsOpts struct {
 
 /*
 GetApplications Get applications
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetApplicationsOpts - Optional Parameters:
- * @param "NameFilter" (optional.String) -
- * @param "WindowSize" (optional.Int64) -
- * @param "To" (optional.Int64) -
- * @param "Page" (optional.Int32) -
- * @param "PageSize" (optional.Int32) -
- * @param "ApplicationBoundaryScope" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetApplicationsOpts - Optional Parameters:
+  - @param "NameFilter" (optional.String) -
+  - @param "WindowSize" (optional.Int64) -
+  - @param "To" (optional.Int64) -
+  - @param "Page" (optional.Int32) -
+  - @param "PageSize" (optional.Int32) -
+  - @param "ApplicationBoundaryScope" (optional.String) -
+
 @return ApplicationResult
 */
 func (a *ApplicationResourcesApiService) GetApplications(ctx _context.Context, localVarOptionals *GetApplicationsOpts) (ApplicationResult, *_nethttp.Response, error) {
@@ -448,13 +451,14 @@ type GetServicesOpts struct {
 
 /*
 GetServices Get services
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetServicesOpts - Optional Parameters:
- * @param "NameFilter" (optional.String) -
- * @param "WindowSize" (optional.Int64) -
- * @param "To" (optional.Int64) -
- * @param "Page" (optional.Int32) -
- * @param "PageSize" (optional.Int32) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetServicesOpts - Optional Parameters:
+  - @param "NameFilter" (optional.String) -
+  - @param "WindowSize" (optional.Int64) -
+  - @param "To" (optional.Int64) -
+  - @param "Page" (optional.Int32) -
+  - @param "PageSize" (optional.Int32) -
+
 @return ServiceResult
 */
 func (a *ApplicationResourcesApiService) GetServices(ctx _context.Context, localVarOptionals *GetServicesOpts) (ServiceResult, *_nethttp.Response, error) {

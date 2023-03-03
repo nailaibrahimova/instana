@@ -28,7 +28,8 @@ type HealthApiService service
 /*
 GetHealthState Basic health traffic light
 The returned JSON object will provide a health property which contains a simple traffic light (GREEN/YELLO/RED). For any non-Green-state a list  of reasons will be provided in the messages array.  Possible messages: * No data being processed * No data arriving from agents
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return HealthState
 */
 func (a *HealthApiService) GetHealthState(ctx _context.Context) (HealthState, *_nethttp.Response, error) {
@@ -121,7 +122,8 @@ func (a *HealthApiService) GetHealthState(ctx _context.Context) (HealthState, *_
 
 /*
 GetVersion API version information
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return InstanaVersionInfo
 */
 func (a *HealthApiService) GetVersion(ctx _context.Context) (InstanaVersionInfo, *_nethttp.Response, error) {

@@ -36,10 +36,11 @@ type GetCallGroupOpts struct {
 /*
 GetCallGroup Get grouped call metrics
 This endpoint retrieves the metrics for calls.    ## Deprecated Parameters  **tagFilters:** The list of tag filters. It is replaced by **tagFilterExpression**, **includeInternal** and **includeSynthetic**.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetCallGroupOpts - Optional Parameters:
- * @param "FillTimeSeries" (optional.Bool) -
- * @param "GetCallGroups" (optional.Interface of GetCallGroups) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetCallGroupOpts - Optional Parameters:
+  - @param "FillTimeSeries" (optional.Bool) -
+  - @param "GetCallGroups" (optional.Interface of GetCallGroups) -
+
 @return CallGroupsResult
 */
 func (a *ApplicationAnalyzeApiService) GetCallGroup(ctx _context.Context, localVarOptionals *GetCallGroupOpts) (CallGroupsResult, *_nethttp.Response, error) {
@@ -144,8 +145,9 @@ func (a *ApplicationAnalyzeApiService) GetCallGroup(ctx _context.Context, localV
 
 /*
 GetCorrelatedTraces Resolve backend trace IDs using correlation IDs from website and mobile app monitoring beacons.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param correlationId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param correlationId
+
 @return []BackendTraceReference
 */
 func (a *ApplicationAnalyzeApiService) GetCorrelatedTraces(ctx _context.Context, correlationId string) ([]BackendTraceReference, *_nethttp.Response, error) {
@@ -245,8 +247,9 @@ func (a *ApplicationAnalyzeApiService) GetCorrelatedTraces(ctx _context.Context,
 
 /*
 GetTrace Get trace detail
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return FullTrace
 */
 func (a *ApplicationAnalyzeApiService) GetTrace(ctx _context.Context, id string) (FullTrace, *_nethttp.Response, error) {
@@ -347,10 +350,11 @@ type GetTraceGroupsOpts struct {
 
 /*
 GetTraceGroups Get grouped trace metrics
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetTraceGroupsOpts - Optional Parameters:
- * @param "FillTimeSeries" (optional.Bool) -
- * @param "GetTraceGroups" (optional.Interface of GetTraceGroups) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetTraceGroupsOpts - Optional Parameters:
+  - @param "FillTimeSeries" (optional.Bool) -
+  - @param "GetTraceGroups" (optional.Interface of GetTraceGroups) -
+
 @return TraceGroupsResult
 */
 func (a *ApplicationAnalyzeApiService) GetTraceGroups(ctx _context.Context, localVarOptionals *GetTraceGroupsOpts) (TraceGroupsResult, *_nethttp.Response, error) {
@@ -461,9 +465,10 @@ type GetTracesOpts struct {
 /*
 GetTraces Get all traces
 This endpoint retrieves the metrics for traces.    **Manditory Paramters:**    **Optional Paramters:**    **Defaults:**    **Limits:**    **Tips:**
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetTracesOpts - Optional Parameters:
- * @param "GetTraces" (optional.Interface of GetTraces) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetTracesOpts - Optional Parameters:
+  - @param "GetTraces" (optional.Interface of GetTraces) -
+
 @return TraceResult
 */
 func (a *ApplicationAnalyzeApiService) GetTraces(ctx _context.Context, localVarOptionals *GetTracesOpts) (TraceResult, *_nethttp.Response, error) {

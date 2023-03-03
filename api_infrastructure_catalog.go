@@ -35,10 +35,11 @@ type GetInfrastructureCatalogMetricsOpts struct {
 /*
 GetInfrastructureCatalogMetrics Get metric catalog
 This endpoint retrieves all available metric definitions of the requested plugin.  ### Path Parameters:  **plugin** The plugin id from [available plugins](#operation/getInfrastructureCatalogPlugins)  ### Optional Parameters:  **filter** You can restrict the returned metric definitions by passing a filter.  * &#x60;custom&#x60; to retrieve custom metric definitions only. * &#x60;builtin&#x60; to retrieve built-in metric definitions only.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param plugin
- * @param optional nil or *GetInfrastructureCatalogMetricsOpts - Optional Parameters:
- * @param "Filter" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param plugin
+  - @param optional nil or *GetInfrastructureCatalogMetricsOpts - Optional Parameters:
+  - @param "Filter" (optional.String) -
+
 @return []MetricInstance
 */
 func (a *InfrastructureCatalogApiService) GetInfrastructureCatalogMetrics(ctx _context.Context, plugin string, localVarOptionals *GetInfrastructureCatalogMetricsOpts) ([]MetricInstance, *_nethttp.Response, error) {
@@ -137,7 +138,8 @@ func (a *InfrastructureCatalogApiService) GetInfrastructureCatalogMetrics(ctx _c
 /*
 GetInfrastructureCatalogPlugins Get plugin catalog
 This endpoint retrieves all available plugin ids for your monitored system.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []PluginResult
 */
 func (a *InfrastructureCatalogApiService) GetInfrastructureCatalogPlugins(ctx _context.Context) ([]PluginResult, *_nethttp.Response, error) {
@@ -230,7 +232,8 @@ func (a *InfrastructureCatalogApiService) GetInfrastructureCatalogPlugins(ctx _c
 
 /*
 GetInfrastructureCatalogPluginsWithCustomMetrics Get all plugins with custom metrics catalog
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []PluginResult
 */
 func (a *InfrastructureCatalogApiService) GetInfrastructureCatalogPluginsWithCustomMetrics(ctx _context.Context) ([]PluginResult, *_nethttp.Response, error) {
@@ -324,7 +327,8 @@ func (a *InfrastructureCatalogApiService) GetInfrastructureCatalogPluginsWithCus
 /*
 GetInfrastructureCatalogSearchFields get search field catalog
 This endpoint retrieves all available search keywords for dynamic focus queries.  These search fields can be accessed via lucene queries. Each field belongs to a context, e.g. to entity, trace or event data. Some fields contain a set of possible fixed values, in this case a deviant value is invalid.  &#x60;&#x60;&#x60; ?query&#x3D;{keyword}:{value} &#x60;&#x60;&#x60;
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []SearchFieldResult
 */
 func (a *InfrastructureCatalogApiService) GetInfrastructureCatalogSearchFields(ctx _context.Context) ([]SearchFieldResult, *_nethttp.Response, error) {

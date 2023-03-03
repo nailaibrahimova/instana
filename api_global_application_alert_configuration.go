@@ -29,8 +29,9 @@ type GlobalApplicationAlertConfigurationApiService service
 
 /*
 CreateGlobalApplicationAlertConfig Create Global Application Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param globalApplicationsAlertConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param globalApplicationsAlertConfig
+
 @return GlobalApplicationAlertConfigWithMetadata
 */
 func (a *GlobalApplicationAlertConfigurationApiService) CreateGlobalApplicationAlertConfig(ctx _context.Context, globalApplicationsAlertConfig GlobalApplicationsAlertConfig) (GlobalApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -125,8 +126,8 @@ func (a *GlobalApplicationAlertConfigurationApiService) CreateGlobalApplicationA
 
 /*
 DeleteGlobalApplicationAlertConfig Delete Global Application Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *GlobalApplicationAlertConfigurationApiService) DeleteGlobalApplicationAlertConfig(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -208,10 +209,10 @@ type DisableGlobalApplicationAlertConfigOpts struct {
 
 /*
 DisableGlobalApplicationAlertConfig Disable Global Application Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *DisableGlobalApplicationAlertConfigOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *DisableGlobalApplicationAlertConfigOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
 */
 func (a *GlobalApplicationAlertConfigurationApiService) DisableGlobalApplicationAlertConfig(ctx _context.Context, id string, localVarOptionals *DisableGlobalApplicationAlertConfigOpts) (*_nethttp.Response, error) {
 	var (
@@ -298,10 +299,10 @@ type EnableGlobalApplicationAlertConfigOpts struct {
 
 /*
 EnableGlobalApplicationAlertConfig Enable Global Application Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *EnableGlobalApplicationAlertConfigOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *EnableGlobalApplicationAlertConfigOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
 */
 func (a *GlobalApplicationAlertConfigurationApiService) EnableGlobalApplicationAlertConfig(ctx _context.Context, id string, localVarOptionals *EnableGlobalApplicationAlertConfigOpts) (*_nethttp.Response, error) {
 	var (
@@ -389,9 +390,10 @@ type FindActiveGlobalApplicationAlertConfigsOpts struct {
 /*
 FindActiveGlobalApplicationAlertConfigs All Global Application Alert Configs
 Configs are sorted descending by their created date.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FindActiveGlobalApplicationAlertConfigsOpts - Optional Parameters:
- * @param "ApplicationId" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *FindActiveGlobalApplicationAlertConfigsOpts - Optional Parameters:
+  - @param "ApplicationId" (optional.String) -
+
 @return []GlobalApplicationAlertConfigWithMetadata
 */
 func (a *GlobalApplicationAlertConfigurationApiService) FindActiveGlobalApplicationAlertConfigs(ctx _context.Context, localVarOptionals *FindActiveGlobalApplicationAlertConfigsOpts) ([]GlobalApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -493,10 +495,11 @@ type FindGlobalApplicationAlertConfigOpts struct {
 /*
 FindGlobalApplicationAlertConfig Get Global Application Alert Config
 Find a Global Application Alert Config by ID. This will deliver deleted configs too.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *FindGlobalApplicationAlertConfigOpts - Optional Parameters:
- * @param "ValidOn" (optional.Int64) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *FindGlobalApplicationAlertConfigOpts - Optional Parameters:
+  - @param "ValidOn" (optional.Int64) -
+
 @return GlobalApplicationAlertConfigWithMetadata
 */
 func (a *GlobalApplicationAlertConfigurationApiService) FindGlobalApplicationAlertConfig(ctx _context.Context, id string, localVarOptionals *FindGlobalApplicationAlertConfigOpts) (GlobalApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -595,8 +598,9 @@ func (a *GlobalApplicationAlertConfigurationApiService) FindGlobalApplicationAle
 /*
 FindGlobalApplicationAlertConfigVersions Get versions of Global Application Alert Config
 Find all versions of a Global Application Alert Config by ID. This will deliver deleted configs too. Configs are sorted descending by their created date.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return []ConfigVersion
 */
 func (a *GlobalApplicationAlertConfigurationApiService) FindGlobalApplicationAlertConfigVersions(ctx _context.Context, id string) ([]ConfigVersion, *_nethttp.Response, error) {
@@ -691,9 +695,10 @@ func (a *GlobalApplicationAlertConfigurationApiService) FindGlobalApplicationAle
 
 /*
 UpdateGlobalApplicationAlertConfig Update Global Application Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param globalApplicationsAlertConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param globalApplicationsAlertConfig
+
 @return GlobalApplicationAlertConfigWithMetadata
 */
 func (a *GlobalApplicationAlertConfigurationApiService) UpdateGlobalApplicationAlertConfig(ctx _context.Context, id string, globalApplicationsAlertConfig GlobalApplicationsAlertConfig) (GlobalApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {

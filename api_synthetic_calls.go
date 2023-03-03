@@ -27,7 +27,7 @@ type SyntheticCallsApiService service
 
 /*
 DeleteSyntheticCall Delete synthetic call configurations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 */
 func (a *SyntheticCallsApiService) DeleteSyntheticCall(ctx _context.Context) (*_nethttp.Response, error) {
 	var (
@@ -102,7 +102,8 @@ func (a *SyntheticCallsApiService) DeleteSyntheticCall(ctx _context.Context) (*_
 
 /*
 GetSyntheticCalls Synthetic call configurations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return SyntheticCallWithDefaultsConfig
 */
 func (a *SyntheticCallsApiService) GetSyntheticCalls(ctx _context.Context) (SyntheticCallWithDefaultsConfig, *_nethttp.Response, error) {
@@ -195,8 +196,8 @@ func (a *SyntheticCallsApiService) GetSyntheticCalls(ctx _context.Context) (Synt
 
 /*
 UpdateSyntheticCall Update synthetic call configurations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param syntheticCallConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param syntheticCallConfig
 */
 func (a *SyntheticCallsApiService) UpdateSyntheticCall(ctx _context.Context, syntheticCallConfig SyntheticCallConfig) (*_nethttp.Response, error) {
 	var (

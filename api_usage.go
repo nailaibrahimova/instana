@@ -28,7 +28,8 @@ type UsageApiService service
 
 /*
 GetAllUsage API usage by customer
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []UsageResult
 */
 func (a *UsageApiService) GetAllUsage(ctx _context.Context) ([]UsageResult, *_nethttp.Response, error) {
@@ -121,10 +122,11 @@ func (a *UsageApiService) GetAllUsage(ctx _context.Context) ([]UsageResult, *_ne
 
 /*
 GetHostsPerDay Host count day / month / year
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param day
- * @param month
- * @param year
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param day
+  - @param month
+  - @param year
+
 @return []UsageResult
 */
 func (a *UsageApiService) GetHostsPerDay(ctx _context.Context, day int32, month int32, year int32) ([]UsageResult, *_nethttp.Response, error) {
@@ -223,9 +225,10 @@ func (a *UsageApiService) GetHostsPerDay(ctx _context.Context, day int32, month 
 
 /*
 GetHostsPerMonth Host count month / year
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param month
- * @param year
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param month
+  - @param year
+
 @return []UsageResult
 */
 func (a *UsageApiService) GetHostsPerMonth(ctx _context.Context, month int32, year int32) ([]UsageResult, *_nethttp.Response, error) {
@@ -322,10 +325,11 @@ func (a *UsageApiService) GetHostsPerMonth(ctx _context.Context, month int32, ye
 
 /*
 GetUsagePerDay API usage day / month / year
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param day
- * @param month
- * @param year
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param day
+  - @param month
+  - @param year
+
 @return []UsageResult
 */
 func (a *UsageApiService) GetUsagePerDay(ctx _context.Context, day int32, month int32, year int32) ([]UsageResult, *_nethttp.Response, error) {
@@ -424,9 +428,10 @@ func (a *UsageApiService) GetUsagePerDay(ctx _context.Context, day int32, month 
 
 /*
 GetUsagePerMonth API usage month / year
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param month
- * @param year
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param month
+  - @param year
+
 @return []UsageResult
 */
 func (a *UsageApiService) GetUsagePerMonth(ctx _context.Context, month int32, year int32) ([]UsageResult, *_nethttp.Response, error) {

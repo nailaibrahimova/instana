@@ -29,8 +29,8 @@ type ReleasesApiService service
 
 /*
 DeleteRelease Delete release
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param releaseId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param releaseId
 */
 func (a *ReleasesApiService) DeleteRelease(ctx _context.Context, releaseId string) (*_nethttp.Response, error) {
 	var (
@@ -115,11 +115,12 @@ type GetAllReleasesOpts struct {
 /*
 GetAllReleases Get all releases
 This endpoint exposes the Releases functionality.  These APIs can be used to create, update, delete and fetch already existing releases.  ## Mandatory Parameters:  **releaseId:** A unique identifier assigned to each release.  ## Optional Parameters:  **name:** Name of the exact release you want to retrieve, eg. \&quot;Release-161\&quot;, \&quot;Release-162\&quot;.  **start:** Start time of the particular release (as UNIX timestamp in milliseconds).  **from:** Filters the releases to retrieve only the releases which have \&quot;start\&quot; time greater than or equal to this value (as UNIX timestamp in milliseconds).  **to:** Filters the releases to retrieve only the releases which have \&quot;start\&quot; time lesser than or equal to this value (as UNIX timestamp in milliseconds).  **maxResults:** Maximum number of releases to be retrieved.  ## Defaults:  **from, to, maxResults:** By default these parameters are not set.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetAllReleasesOpts - Optional Parameters:
- * @param "From" (optional.Int64) -
- * @param "To" (optional.Int64) -
- * @param "MaxResults" (optional.Int32) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetAllReleasesOpts - Optional Parameters:
+  - @param "From" (optional.Int64) -
+  - @param "To" (optional.Int64) -
+  - @param "MaxResults" (optional.Int32) -
+
 @return []ReleaseWithMetadata
 */
 func (a *ReleasesApiService) GetAllReleases(ctx _context.Context, localVarOptionals *GetAllReleasesOpts) ([]ReleaseWithMetadata, *_nethttp.Response, error) {
@@ -221,8 +222,9 @@ func (a *ReleasesApiService) GetAllReleases(ctx _context.Context, localVarOption
 
 /*
 GetRelease Get release
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param releaseId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param releaseId
+
 @return ReleaseWithMetadata
 */
 func (a *ReleasesApiService) GetRelease(ctx _context.Context, releaseId string) (ReleaseWithMetadata, *_nethttp.Response, error) {
@@ -317,8 +319,9 @@ func (a *ReleasesApiService) GetRelease(ctx _context.Context, releaseId string) 
 
 /*
 PostRelease Create release
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param release
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param release
+
 @return ReleaseWithMetadata
 */
 func (a *ReleasesApiService) PostRelease(ctx _context.Context, release Release) (ReleaseWithMetadata, *_nethttp.Response, error) {
@@ -413,9 +416,10 @@ func (a *ReleasesApiService) PostRelease(ctx _context.Context, release Release) 
 
 /*
 PutRelease Update release
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param releaseId
- * @param release
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param releaseId
+  - @param release
+
 @return ReleaseWithMetadata
 */
 func (a *ReleasesApiService) PutRelease(ctx _context.Context, releaseId string, release Release) (ReleaseWithMetadata, *_nethttp.Response, error) {

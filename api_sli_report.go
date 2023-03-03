@@ -36,12 +36,13 @@ type GetSliOpts struct {
 
 /*
 GetSli Generate SLI report
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param sliId
- * @param optional nil or *GetSliOpts - Optional Parameters:
- * @param "Slo" (optional.Float64) -
- * @param "From" (optional.Int64) -
- * @param "To" (optional.Int64) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param sliId
+  - @param optional nil or *GetSliOpts - Optional Parameters:
+  - @param "Slo" (optional.Float64) -
+  - @param "From" (optional.Int64) -
+  - @param "To" (optional.Int64) -
+
 @return SliReport
 */
 func (a *SLIReportApiService) GetSli(ctx _context.Context, sliId string, localVarOptionals *GetSliOpts) (SliReport, *_nethttp.Response, error) {

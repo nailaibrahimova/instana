@@ -35,11 +35,12 @@ type GetAuditLogsOpts struct {
 
 /*
 GetAuditLogs Audit log
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetAuditLogsOpts - Optional Parameters:
- * @param "Offset" (optional.Int32) -
- * @param "Query" (optional.String) -
- * @param "PageSize" (optional.Int32) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetAuditLogsOpts - Optional Parameters:
+  - @param "Offset" (optional.Int32) -
+  - @param "Query" (optional.String) -
+  - @param "PageSize" (optional.Int32) -
+
 @return AuditLogUiResponse
 */
 func (a *AuditLogApiService) GetAuditLogs(ctx _context.Context, localVarOptionals *GetAuditLogsOpts) (AuditLogUiResponse, *_nethttp.Response, error) {
