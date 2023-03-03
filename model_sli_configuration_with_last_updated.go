@@ -12,10 +12,10 @@ package instana
 
 // SliConfigurationWithLastUpdated struct for SliConfigurationWithLastUpdated
 type SliConfigurationWithLastUpdated struct {
-	Id                         string              `json:"id"`
-	InitialEvaluationTimestamp int64               `json:"initialEvaluationTimestamp,omitempty"`
-	LastUpdated                int64               `json:"lastUpdated,omitempty"`
-	MetricConfiguration        MetricConfiguration `json:"metricConfiguration,omitempty"`
-	SliEntity                  SliEntity           `json:"sliEntity"`
-	SliName                    string              `json:"sliName"`
+	Id                         string               `json:"id"`
+	InitialEvaluationTimestamp int64                `json:"initialEvaluationTimestamp,omitempty"`
+	LastUpdated                int64                `json:"lastUpdated,omitempty"`
+	MetricConfiguration        *MetricConfiguration `json:"metricConfiguration,omitempty"`
+	SliEntity                  *SliEntity           `json:"sliEntity"`
+	SliName                    string               `json:"sliName"`
 }

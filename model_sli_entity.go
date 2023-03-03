@@ -17,8 +17,8 @@ type SliEntity struct {
 	ServiceID                 *string                   `json:"serviceId"`
 	EndpointID                *string                   `json:"endpointId"`
 	BoundaryScope             string                    `json:"boundaryScope"`
-	GoodEventFilters          *interface{}              `json:"goodEventFilters"`
-	BadEventFilters           *interface{}              `json:"badEventFilters"`
+	GoodEventFilters          *SliEventFilterExpression `json:"goodEventFilters"`
+	BadEventFilters           *SliEventFilterExpression `json:"badEventFilters"`
 	IncludeInternal           bool                      `json:"includeInternal"`
 	IncludeSynthetic          bool                      `json:"includeSynthetic"`
 	GoodEventFilterExpression *SliEventFilterExpression `json:"goodEventFilterExpression"`

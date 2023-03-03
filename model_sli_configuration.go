@@ -12,9 +12,9 @@ package instana
 
 // SliConfiguration struct for SliConfiguration
 type SliConfiguration struct {
-	Id                         string              `json:"id"`
-	InitialEvaluationTimestamp int64               `json:"initialEvaluationTimestamp,omitempty"`
-	MetricConfiguration        MetricConfiguration `json:"metricConfiguration,omitempty"`
-	SliEntity                  SliEntity           `json:"sliEntity"`
-	SliName                    string              `json:"sliName"`
+	Id                         string               `json:"id"`
+	InitialEvaluationTimestamp int64                `json:"initialEvaluationTimestamp,omitempty"`
+	MetricConfiguration        *MetricConfiguration `json:"metricConfiguration,omitempty"`
+	SliEntity                  *SliEntity           `json:"sliEntity"`
+	SliName                    string               `json:"sliName"`
 }
