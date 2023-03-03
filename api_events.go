@@ -29,8 +29,9 @@ type EventsApiService service
 
 /*
 GetEvent Get a particular event
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventId
+
 @return EventResult
 */
 func (a *EventsApiService) GetEvent(ctx _context.Context, eventId string) (EventResult, *_nethttp.Response, error) {
@@ -133,12 +134,13 @@ type GetEventsOpts struct {
 
 /*
 GetEvents Get all events
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetEventsOpts - Optional Parameters:
- * @param "WindowSize" (optional.Int64) -
- * @param "From" (optional.Int64) -
- * @param "To" (optional.Int64) -
- * @param "ExcludeTriggeredBefore" (optional.Bool) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetEventsOpts - Optional Parameters:
+  - @param "WindowSize" (optional.Int64) -
+  - @param "From" (optional.Int64) -
+  - @param "To" (optional.Int64) -
+  - @param "ExcludeTriggeredBefore" (optional.Bool) -
+
 @return []EventResult
 */
 func (a *EventsApiService) GetEvents(ctx _context.Context, localVarOptionals *GetEventsOpts) ([]EventResult, *_nethttp.Response, error) {

@@ -28,7 +28,7 @@ type SessionSettingsApiService service
 
 /*
 DeleteSessionSettings Delete session settings
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 */
 func (a *SessionSettingsApiService) DeleteSessionSettings(ctx _context.Context) (*_nethttp.Response, error) {
 	var (
@@ -103,7 +103,8 @@ func (a *SessionSettingsApiService) DeleteSessionSettings(ctx _context.Context) 
 
 /*
 GetSessionSettings Session settings
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return SessionSettings
 */
 func (a *SessionSettingsApiService) GetSessionSettings(ctx _context.Context) (SessionSettings, *_nethttp.Response, error) {
@@ -201,9 +202,10 @@ type SetSessionSettingsOpts struct {
 
 /*
 SetSessionSettings Configure session settings
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SetSessionSettingsOpts - Optional Parameters:
- * @param "SessionSettings" (optional.Interface of SessionSettings) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *SetSessionSettingsOpts - Optional Parameters:
+  - @param "SessionSettings" (optional.Interface of SessionSettings) -
+
 @return SessionSettings
 */
 func (a *SessionSettingsApiService) SetSessionSettings(ctx _context.Context, localVarOptionals *SetSessionSettingsOpts) (SessionSettings, *_nethttp.Response, error) {

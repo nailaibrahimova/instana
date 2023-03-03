@@ -36,11 +36,12 @@ type GetAgentSnapshotOpts struct {
 
 /*
 GetAgentSnapshot Get host agent snapshot details
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *GetAgentSnapshotOpts - Optional Parameters:
- * @param "To" (optional.Int64) -
- * @param "WindowSize" (optional.Int64) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *GetAgentSnapshotOpts - Optional Parameters:
+  - @param "To" (optional.Int64) -
+  - @param "WindowSize" (optional.Int64) -
+
 @return SnapshotItem
 */
 func (a *HostAgentApiService) GetAgentSnapshot(ctx _context.Context, id string, localVarOptionals *GetAgentSnapshotOpts) (SnapshotItem, *_nethttp.Response, error) {
@@ -146,11 +147,11 @@ type GetLogsOpts struct {
 
 /*
 GetLogs Agent download logs
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param hostId
- * @param file
- * @param optional nil or *GetLogsOpts - Optional Parameters:
- * @param "Download" (optional.Bool) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param hostId
+  - @param file
+  - @param optional nil or *GetLogsOpts - Optional Parameters:
+  - @param "Download" (optional.Bool) -
 */
 func (a *HostAgentApiService) GetLogs(ctx _context.Context, hostId string, file []string, localVarOptionals *GetLogsOpts) (*_nethttp.Response, error) {
 	var (
@@ -250,13 +251,14 @@ type SearchOpts struct {
 
 /*
 Search Query host agent snapshots
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SearchOpts - Optional Parameters:
- * @param "Query" (optional.String) -
- * @param "To" (optional.Int64) -
- * @param "WindowSize" (optional.Int64) -
- * @param "Size" (optional.Int32) -
- * @param "Offline" (optional.Bool) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *SearchOpts - Optional Parameters:
+  - @param "Query" (optional.String) -
+  - @param "To" (optional.Int64) -
+  - @param "WindowSize" (optional.Int64) -
+  - @param "Size" (optional.Int32) -
+  - @param "Offline" (optional.Bool) -
+
 @return SnapshotResult
 */
 func (a *HostAgentApiService) Search(ctx _context.Context, localVarOptionals *SearchOpts) (SnapshotResult, *_nethttp.Response, error) {
@@ -364,8 +366,8 @@ func (a *HostAgentApiService) Search(ctx _context.Context, localVarOptionals *Se
 
 /*
 Update Agent update
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param hostId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param hostId
 */
 func (a *HostAgentApiService) Update(ctx _context.Context, hostId string) (*_nethttp.Response, error) {
 	var (
@@ -448,10 +450,10 @@ type UpdateConfigurationByHostOpts struct {
 /*
 UpdateConfigurationByHost Update agent configuration by host
 This endpoint can be used to initialize or change configuration management settings for a specific host agent.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param hostId
- * @param optional nil or *UpdateConfigurationByHostOpts - Optional Parameters:
- * @param "AgentConfigurationUpdate" (optional.Interface of AgentConfigurationUpdate) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param hostId
+  - @param optional nil or *UpdateConfigurationByHostOpts - Optional Parameters:
+  - @param "AgentConfigurationUpdate" (optional.Interface of AgentConfigurationUpdate) -
 */
 func (a *HostAgentApiService) UpdateConfigurationByHost(ctx _context.Context, hostId string, localVarOptionals *UpdateConfigurationByHostOpts) (*_nethttp.Response, error) {
 	var (
@@ -548,14 +550,14 @@ type UpdateConfigurationByQueryOpts struct {
 /*
 UpdateConfigurationByQuery Update agent configuration by query
 This endpoint can be used to initialize or change configuration management settings for all agents selected by the given Dynamic Focus Query.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *UpdateConfigurationByQueryOpts - Optional Parameters:
- * @param "Query" (optional.String) -
- * @param "To" (optional.Int64) -
- * @param "WindowSize" (optional.Int64) -
- * @param "Size" (optional.Int32) -
- * @param "Offline" (optional.Bool) -
- * @param "AgentConfigurationUpdate" (optional.Interface of AgentConfigurationUpdate) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *UpdateConfigurationByQueryOpts - Optional Parameters:
+  - @param "Query" (optional.String) -
+  - @param "To" (optional.Int64) -
+  - @param "WindowSize" (optional.Int64) -
+  - @param "Size" (optional.Int32) -
+  - @param "Offline" (optional.Bool) -
+  - @param "AgentConfigurationUpdate" (optional.Interface of AgentConfigurationUpdate) -
 */
 func (a *HostAgentApiService) UpdateConfigurationByQuery(ctx _context.Context, localVarOptionals *UpdateConfigurationByQueryOpts) (*_nethttp.Response, error) {
 	var (

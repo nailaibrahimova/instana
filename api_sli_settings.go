@@ -29,8 +29,9 @@ type SLISettingsApiService service
 /*
 CreateSli Create SLI Config
 This endpoint creates the Service Level Indicator Configuration  ## Mandatory Parameters:  - **id** A unique identifier for each SLI configuration  - **sliName:** Name for the SLI configuration  - **sliEntity:** Entity of the SLI configuration  ### SLI Entity specific parameters  Depending on the chosen &#x60;sliType&#x60; in the &#x60;sliEntity&#x60;, there are further required parameters:  #### Application SLI entity  This option can be used to create a Time-Based SLI  - **sliEntity.applicationId:** The Id of the Application Perspective  - **sliEntity.boundaryScope:** Boundary scope of the Application Perspective  - **metricConfiguration.metricName:** The metric name on which to compute the SLI  - **metricConfiguration.metricAggregation:** The aggregation of the metric  - **metricConfiguration.threshold:** Threshold for the metric  #### Availability SLI entity  This opetion can be used to create an Event-Based SLI  - **sliEntity.applicationId:** The Id of the Application Perspective  - **sliEntity.boundaryScope:** Boundary scope of the Application Perspective  ## Deprecated Parameters for Availability SLI entity:  - **sliEntity.serviceId:** The ID if the Service in he context of an Application Perspective  - **sliEntity.endpointId:** The ID of an Endpoint belonging to a Service  - **sliEntity.goodEventFilters:** The list of TagFilters to match good events / calls  - **sliEntity.badEventFilters:** The list of TagFilters to match bad events / calls  All of these filters can be included using the list of TagFilterExpressions via **sliEntity.goodEventFilterExpression** and **sliEntity.badEventFilterExpression**. These parameters will be removed in the upcoming releases.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param sliConfiguration
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param sliConfiguration
+
 @return []SliConfigurationWithLastUpdated
 */
 func (a *SLISettingsApiService) CreateSli(ctx _context.Context, sliConfiguration SliConfiguration) ([]SliConfigurationWithLastUpdated, *_nethttp.Response, error) {
@@ -125,8 +126,8 @@ func (a *SLISettingsApiService) CreateSli(ctx _context.Context, sliConfiguration
 
 /*
 Delete Delete SLI Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *SLISettingsApiService) Delete(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -203,7 +204,8 @@ func (a *SLISettingsApiService) Delete(ctx _context.Context, id string) (*_netht
 
 /*
 GetSli1 Get All SLI Configs
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []SliConfigurationWithLastUpdated
 */
 func (a *SLISettingsApiService) GetSli1(ctx _context.Context) ([]SliConfigurationWithLastUpdated, *_nethttp.Response, error) {
@@ -296,8 +298,9 @@ func (a *SLISettingsApiService) GetSli1(ctx _context.Context) ([]SliConfiguratio
 
 /*
 GetSli2 Get SLI Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return SliConfigurationWithLastUpdated
 */
 func (a *SLISettingsApiService) GetSli2(ctx _context.Context, id string) (SliConfigurationWithLastUpdated, *_nethttp.Response, error) {
@@ -392,9 +395,10 @@ func (a *SLISettingsApiService) GetSli2(ctx _context.Context, id string) (SliCon
 
 /*
 PutSli Update SLI Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param sliConfiguration
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param sliConfiguration
+
 @return []SliConfigurationWithLastUpdated
 */
 func (a *SLISettingsApiService) PutSli(ctx _context.Context, id string, sliConfiguration SliConfiguration) ([]SliConfigurationWithLastUpdated, *_nethttp.Response, error) {

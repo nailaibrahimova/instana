@@ -28,7 +28,8 @@ type WebsiteCatalogApiService service
 /*
 GetWebsiteCatalogMetrics Metric catalog
 This endpoint retrieves all available metric definitions for website monitoring.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []WebsiteMonitoringMetricDescription
 */
 func (a *WebsiteCatalogApiService) GetWebsiteCatalogMetrics(ctx _context.Context) ([]WebsiteMonitoringMetricDescription, *_nethttp.Response, error) {
@@ -122,7 +123,8 @@ func (a *WebsiteCatalogApiService) GetWebsiteCatalogMetrics(ctx _context.Context
 /*
 GetWebsiteCatalogTags Get all existing website tags
 This endpoint retrieves all available tags for your monitored system.  These tags can be used to group metric results. &#x60;&#x60;&#x60; \&quot;group\&quot;: {   \&quot;groupbyTag\&quot;: \&quot;beacon.page.name\&quot; } &#x60;&#x60;&#x60;  These tags can be used to filter metric results. &#x60;&#x60;&#x60; \&quot;tagFilters\&quot;: [{  \&quot;name\&quot;: \&quot;beacon.website.name\&quot;,  \&quot;operator\&quot;: \&quot;EQUALS\&quot;,  \&quot;value\&quot;: \&quot;example\&quot; }] &#x60;&#x60;&#x60;
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []Tag
 */
 func (a *WebsiteCatalogApiService) GetWebsiteCatalogTags(ctx _context.Context) ([]Tag, *_nethttp.Response, error) {
@@ -215,9 +217,10 @@ func (a *WebsiteCatalogApiService) GetWebsiteCatalogTags(ctx _context.Context) (
 
 /*
 GetWebsiteTagCatalog Get website tag catalog
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param beaconType
- * @param useCase
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param beaconType
+  - @param useCase
+
 @return TagCatalog
 */
 func (a *WebsiteCatalogApiService) GetWebsiteTagCatalog(ctx _context.Context, beaconType string, useCase string) (TagCatalog, *_nethttp.Response, error) {

@@ -31,8 +31,9 @@ type EventSettingsApiService service
 /*
 CreateWebsiteAlertConfig Create Website Alert Config
 This API endpoint creates the Website Alert Configuration.  ## Mandatory Parameters:  - **name:** Name for the website alert configuration.  - **description:** Description for the website alert configuration.  - **severity:** The severity of the alert when triggered, which is either &#x60;5&#x60; (Warning), or &#x60;10&#x60; (Critical).  - **triggering:** Optional flag to indicate whether also an Incident is triggered or not.  - **websiteId:** Unique ID of the website.  - **tagFilterExpression:** Boolean expression of tag filters to define the scope of relevant website beacons.  - **granularity:** The evaluation granularity used for detection of violations of the defined threshold. In other words, it defines the size of the tumbling window used.  - **rule:** Indicates the type of rule this alert configuration is about.  - **threshold:** Indicates the type of threshold this alert rule is evaluated on.  - **timeThreshold:** Indicates the type of violation of the defined threshold.  - **alertChannelIds:** List of IDs of alert channels defined in Instana.  ## Deprecated Parameters  **tagFilters:** The list of tag filters. It is replaced by **tagFilterExpression**.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param websiteAlertConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param websiteAlertConfig
+
 @return []WebsiteAlertConfigWithMetadata
 */
 func (a *EventSettingsApiService) CreateWebsiteAlertConfig(ctx _context.Context, websiteAlertConfig WebsiteAlertConfig) ([]WebsiteAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -127,8 +128,8 @@ func (a *EventSettingsApiService) CreateWebsiteAlertConfig(ctx _context.Context,
 
 /*
 DeleteAlert Delete Alert Configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *EventSettingsApiService) DeleteAlert(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -205,8 +206,8 @@ func (a *EventSettingsApiService) DeleteAlert(ctx _context.Context, id string) (
 
 /*
 DeleteAlertingChannel Delete alerting channel
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *EventSettingsApiService) DeleteAlertingChannel(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -283,8 +284,8 @@ func (a *EventSettingsApiService) DeleteAlertingChannel(ctx _context.Context, id
 
 /*
 DeleteBuiltInEventSpecification Delete built-in event specification
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventSpecificationId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventSpecificationId
 */
 func (a *EventSettingsApiService) DeleteBuiltInEventSpecification(ctx _context.Context, eventSpecificationId string) (*_nethttp.Response, error) {
 	var (
@@ -361,8 +362,8 @@ func (a *EventSettingsApiService) DeleteBuiltInEventSpecification(ctx _context.C
 
 /*
 DeleteCustomEventSpecification Delete custom event specification
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventSpecificationId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventSpecificationId
 */
 func (a *EventSettingsApiService) DeleteCustomEventSpecification(ctx _context.Context, eventSpecificationId string) (*_nethttp.Response, error) {
 	var (
@@ -439,7 +440,7 @@ func (a *EventSettingsApiService) DeleteCustomEventSpecification(ctx _context.Co
 
 /*
 DeleteCustomPayloadConfiguration Delete Custom Payload Configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 */
 func (a *EventSettingsApiService) DeleteCustomPayloadConfiguration(ctx _context.Context) (*_nethttp.Response, error) {
 	var (
@@ -514,8 +515,8 @@ func (a *EventSettingsApiService) DeleteCustomPayloadConfiguration(ctx _context.
 
 /*
 DeleteWebsiteAlertConfig Delete Website Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *EventSettingsApiService) DeleteWebsiteAlertConfig(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -597,10 +598,11 @@ type DisableBuiltInEventSpecificationOpts struct {
 
 /*
 DisableBuiltInEventSpecification Disable built-in event specification
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventSpecificationId
- * @param optional nil or *DisableBuiltInEventSpecificationOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventSpecificationId
+  - @param optional nil or *DisableBuiltInEventSpecificationOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
+
 @return BuiltInEventSpecificationWithLastUpdated
 */
 func (a *EventSettingsApiService) DisableBuiltInEventSpecification(ctx _context.Context, eventSpecificationId string, localVarOptionals *DisableBuiltInEventSpecificationOpts) (BuiltInEventSpecificationWithLastUpdated, *_nethttp.Response, error) {
@@ -705,10 +707,11 @@ type DisableCustomEventSpecificationOpts struct {
 
 /*
 DisableCustomEventSpecification Disable custom event specification
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventSpecificationId
- * @param optional nil or *DisableCustomEventSpecificationOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventSpecificationId
+  - @param optional nil or *DisableCustomEventSpecificationOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
+
 @return CustomEventSpecificationWithLastUpdated
 */
 func (a *EventSettingsApiService) DisableCustomEventSpecification(ctx _context.Context, eventSpecificationId string, localVarOptionals *DisableCustomEventSpecificationOpts) (CustomEventSpecificationWithLastUpdated, *_nethttp.Response, error) {
@@ -813,10 +816,11 @@ type DisableWebsiteAlertConfigOpts struct {
 
 /*
 DisableWebsiteAlertConfig Disable Website Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *DisableWebsiteAlertConfigOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *DisableWebsiteAlertConfigOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
+
 @return []WebsiteAlertConfigWithMetadata
 */
 func (a *EventSettingsApiService) DisableWebsiteAlertConfig(ctx _context.Context, id string, localVarOptionals *DisableWebsiteAlertConfigOpts) ([]WebsiteAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -921,10 +925,11 @@ type EnableBuiltInEventSpecificationOpts struct {
 
 /*
 EnableBuiltInEventSpecification Enable built-in event specification
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventSpecificationId
- * @param optional nil or *EnableBuiltInEventSpecificationOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventSpecificationId
+  - @param optional nil or *EnableBuiltInEventSpecificationOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
+
 @return BuiltInEventSpecificationWithLastUpdated
 */
 func (a *EventSettingsApiService) EnableBuiltInEventSpecification(ctx _context.Context, eventSpecificationId string, localVarOptionals *EnableBuiltInEventSpecificationOpts) (BuiltInEventSpecificationWithLastUpdated, *_nethttp.Response, error) {
@@ -1029,10 +1034,11 @@ type EnableCustomEventSpecificationOpts struct {
 
 /*
 EnableCustomEventSpecification Enable custom event specification
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventSpecificationId
- * @param optional nil or *EnableCustomEventSpecificationOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventSpecificationId
+  - @param optional nil or *EnableCustomEventSpecificationOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
+
 @return CustomEventSpecificationWithLastUpdated
 */
 func (a *EventSettingsApiService) EnableCustomEventSpecification(ctx _context.Context, eventSpecificationId string, localVarOptionals *EnableCustomEventSpecificationOpts) (CustomEventSpecificationWithLastUpdated, *_nethttp.Response, error) {
@@ -1137,10 +1143,11 @@ type EnableWebsiteAlertConfigOpts struct {
 
 /*
 EnableWebsiteAlertConfig Enable Website Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *EnableWebsiteAlertConfigOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *EnableWebsiteAlertConfigOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
+
 @return []WebsiteAlertConfigWithMetadata
 */
 func (a *EventSettingsApiService) EnableWebsiteAlertConfig(ctx _context.Context, id string, localVarOptionals *EnableWebsiteAlertConfigOpts) ([]WebsiteAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -1246,9 +1253,10 @@ type FindActiveWebsiteAlertConfigsOpts struct {
 /*
 FindActiveWebsiteAlertConfigs All Website Alert Configs
 Configs are sorted descending by their created date.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FindActiveWebsiteAlertConfigsOpts - Optional Parameters:
- * @param "WebsiteId" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *FindActiveWebsiteAlertConfigsOpts - Optional Parameters:
+  - @param "WebsiteId" (optional.String) -
+
 @return []WebsiteAlertConfigWithMetadata
 */
 func (a *EventSettingsApiService) FindActiveWebsiteAlertConfigs(ctx _context.Context, localVarOptionals *FindActiveWebsiteAlertConfigsOpts) ([]WebsiteAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -1350,10 +1358,11 @@ type FindWebsiteAlertConfigOpts struct {
 /*
 FindWebsiteAlertConfig Get Website Alert Config
 Find a Website Alert Config by ID. This will deliver deleted configs too.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *FindWebsiteAlertConfigOpts - Optional Parameters:
- * @param "ValidOn" (optional.Int64) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *FindWebsiteAlertConfigOpts - Optional Parameters:
+  - @param "ValidOn" (optional.Int64) -
+
 @return []WebsiteAlertConfigWithMetadata
 */
 func (a *EventSettingsApiService) FindWebsiteAlertConfig(ctx _context.Context, id string, localVarOptionals *FindWebsiteAlertConfigOpts) ([]WebsiteAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -1452,8 +1461,9 @@ func (a *EventSettingsApiService) FindWebsiteAlertConfig(ctx _context.Context, i
 /*
 FindWebsiteAlertConfigVersions Get versions of Website Alert Config
 Find all versions of a Website Alert Config by ID. This will deliver deleted configs too. Configs are sorted descending by their created date.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return []ConfigVersion
 */
 func (a *EventSettingsApiService) FindWebsiteAlertConfigVersions(ctx _context.Context, id string) ([]ConfigVersion, *_nethttp.Response, error) {
@@ -1548,8 +1558,9 @@ func (a *EventSettingsApiService) FindWebsiteAlertConfigVersions(ctx _context.Co
 
 /*
 GetAlert Find an Alert Configuration by ID
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return AlertingConfigurationWithLastUpdated
 */
 func (a *EventSettingsApiService) GetAlert(ctx _context.Context, id string) (AlertingConfigurationWithLastUpdated, *_nethttp.Response, error) {
@@ -1644,8 +1655,9 @@ func (a *EventSettingsApiService) GetAlert(ctx _context.Context, id string) (Ale
 
 /*
 GetAlertingChannel Alerting channel
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return AbstractIntegration
 */
 func (a *EventSettingsApiService) GetAlertingChannel(ctx _context.Context, id string) (AbstractIntegration, *_nethttp.Response, error) {
@@ -1745,9 +1757,10 @@ type GetAlertingChannelsOpts struct {
 
 /*
 GetAlertingChannels All alerting channels
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetAlertingChannelsOpts - Optional Parameters:
- * @param "Ids" (optional.Interface of []string) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetAlertingChannelsOpts - Optional Parameters:
+  - @param "Ids" (optional.Interface of []string) -
+
 @return []AbstractIntegration
 */
 func (a *EventSettingsApiService) GetAlertingChannels(ctx _context.Context, localVarOptionals *GetAlertingChannelsOpts) ([]AbstractIntegration, *_nethttp.Response, error) {
@@ -1856,9 +1869,10 @@ type GetAlertingChannelsOverviewOpts struct {
 
 /*
 GetAlertingChannelsOverview Overview over all alerting channels
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetAlertingChannelsOverviewOpts - Optional Parameters:
- * @param "Ids" (optional.Interface of []string) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetAlertingChannelsOverviewOpts - Optional Parameters:
+  - @param "Ids" (optional.Interface of []string) -
+
 @return []IntegrationOverview
 */
 func (a *EventSettingsApiService) GetAlertingChannelsOverview(ctx _context.Context, localVarOptionals *GetAlertingChannelsOverviewOpts) ([]IntegrationOverview, *_nethttp.Response, error) {
@@ -1967,9 +1981,10 @@ type GetAlertingConfigurationInfosOpts struct {
 
 /*
 GetAlertingConfigurationInfos All alerting configuration info
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetAlertingConfigurationInfosOpts - Optional Parameters:
- * @param "IntegrationId" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetAlertingConfigurationInfosOpts - Optional Parameters:
+  - @param "IntegrationId" (optional.String) -
+
 @return []ValidatedAlertingChannelInputInfo
 */
 func (a *EventSettingsApiService) GetAlertingConfigurationInfos(ctx _context.Context, localVarOptionals *GetAlertingConfigurationInfosOpts) ([]ValidatedAlertingChannelInputInfo, *_nethttp.Response, error) {
@@ -2065,7 +2080,8 @@ func (a *EventSettingsApiService) GetAlertingConfigurationInfos(ctx _context.Con
 
 /*
 GetAlerts Get all Alert Configurations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []ValidatedAlertingConfiguration
 */
 func (a *EventSettingsApiService) GetAlerts(ctx _context.Context) ([]ValidatedAlertingConfiguration, *_nethttp.Response, error) {
@@ -2158,8 +2174,9 @@ func (a *EventSettingsApiService) GetAlerts(ctx _context.Context) ([]ValidatedAl
 
 /*
 GetBuiltInEventSpecification Built-in event specifications
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventSpecificationId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventSpecificationId
+
 @return BuiltInEventSpecification
 */
 func (a *EventSettingsApiService) GetBuiltInEventSpecification(ctx _context.Context, eventSpecificationId string) (BuiltInEventSpecification, *_nethttp.Response, error) {
@@ -2259,9 +2276,10 @@ type GetBuiltInEventSpecificationsOpts struct {
 
 /*
 GetBuiltInEventSpecifications All built-in event specification
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetBuiltInEventSpecificationsOpts - Optional Parameters:
- * @param "Ids" (optional.Interface of []string) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetBuiltInEventSpecificationsOpts - Optional Parameters:
+  - @param "Ids" (optional.Interface of []string) -
+
 @return []BuiltInEventSpecificationWithLastUpdated
 */
 func (a *EventSettingsApiService) GetBuiltInEventSpecifications(ctx _context.Context, localVarOptionals *GetBuiltInEventSpecificationsOpts) ([]BuiltInEventSpecificationWithLastUpdated, *_nethttp.Response, error) {
@@ -2365,8 +2383,9 @@ func (a *EventSettingsApiService) GetBuiltInEventSpecifications(ctx _context.Con
 
 /*
 GetCustomEventSpecification Custom event specification
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventSpecificationId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventSpecificationId
+
 @return CustomEventSpecificationWithLastUpdated
 */
 func (a *EventSettingsApiService) GetCustomEventSpecification(ctx _context.Context, eventSpecificationId string) (CustomEventSpecificationWithLastUpdated, *_nethttp.Response, error) {
@@ -2461,7 +2480,8 @@ func (a *EventSettingsApiService) GetCustomEventSpecification(ctx _context.Conte
 
 /*
 GetCustomEventSpecifications All custom event specifications
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []CustomEventSpecificationWithLastUpdated
 */
 func (a *EventSettingsApiService) GetCustomEventSpecifications(ctx _context.Context) ([]CustomEventSpecificationWithLastUpdated, *_nethttp.Response, error) {
@@ -2554,7 +2574,8 @@ func (a *EventSettingsApiService) GetCustomEventSpecifications(ctx _context.Cont
 
 /*
 GetCustomPayloadConfigurations Get Custom Payload Configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return CustomPayloadWithLastUpdated
 */
 func (a *EventSettingsApiService) GetCustomPayloadConfigurations(ctx _context.Context) (CustomPayloadWithLastUpdated, *_nethttp.Response, error) {
@@ -2647,7 +2668,8 @@ func (a *EventSettingsApiService) GetCustomPayloadConfigurations(ctx _context.Co
 
 /*
 GetCustomPayloadTagCatalog Get tag catalog for custom payload in alerting
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return TagCatalog
 */
 func (a *EventSettingsApiService) GetCustomPayloadTagCatalog(ctx _context.Context) (TagCatalog, *_nethttp.Response, error) {
@@ -2740,7 +2762,8 @@ func (a *EventSettingsApiService) GetCustomPayloadTagCatalog(ctx _context.Contex
 
 /*
 GetEventSpecificationInfos Summary of all built-in and custom event specifications
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []EventSpecificationInfo
 */
 func (a *EventSettingsApiService) GetEventSpecificationInfos(ctx _context.Context) ([]EventSpecificationInfo, *_nethttp.Response, error) {
@@ -2834,8 +2857,9 @@ func (a *EventSettingsApiService) GetEventSpecificationInfos(ctx _context.Contex
 /*
 GetEventSpecificationInfosByIds All built-in and custom event specifications
 Summary of all built-in and custom event specifications by IDs
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param requestBody
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param requestBody
+
 @return []EventSpecificationInfo
 */
 func (a *EventSettingsApiService) GetEventSpecificationInfosByIds(ctx _context.Context, requestBody []string) ([]EventSpecificationInfo, *_nethttp.Response, error) {
@@ -2930,7 +2954,8 @@ func (a *EventSettingsApiService) GetEventSpecificationInfosByIds(ctx _context.C
 
 /*
 GetSystemRules All system rules for custom event specifications
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []SystemRuleLabel
 */
 func (a *EventSettingsApiService) GetSystemRules(ctx _context.Context) ([]SystemRuleLabel, *_nethttp.Response, error) {
@@ -3023,9 +3048,10 @@ func (a *EventSettingsApiService) GetSystemRules(ctx _context.Context) ([]System
 
 /*
 PutAlert Update Alert Configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param alertingConfiguration
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param alertingConfiguration
+
 @return AlertingConfigurationWithLastUpdated
 */
 func (a *EventSettingsApiService) PutAlert(ctx _context.Context, id string, alertingConfiguration AlertingConfiguration) (AlertingConfigurationWithLastUpdated, *_nethttp.Response, error) {
@@ -3122,9 +3148,9 @@ func (a *EventSettingsApiService) PutAlert(ctx _context.Context, id string, aler
 
 /*
 PutAlertingChannel Update alerting channel
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param abstractIntegration
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param abstractIntegration
 */
 func (a *EventSettingsApiService) PutAlertingChannel(ctx _context.Context, id string, abstractIntegration AbstractIntegration) (*_nethttp.Response, error) {
 	var (
@@ -3204,9 +3230,10 @@ func (a *EventSettingsApiService) PutAlertingChannel(ctx _context.Context, id st
 /*
 PutCustomEventSpecification Create or Update custom event specification
 This endpoint creates or updates the Custom Event Specification   ## Mandatory Parameters:  - **eventSpecificationId(Path Parameter):** A unique identifier for each custom event  - **id:** Same as the eventSpecificationId  - **name:** Name for the custom event  - **entityType:** Name of tha available plugins for the selected source  - **rules.ruleType:** Type of the rule being set for the custom event  ### Rule-type specific parameters  Depending on the chosen &#x60;ruleType&#x60;, there are further required parameters:  #### Threshold Rule using a dynamic built-in metric by pattern :  - **rules.conditionOperator:** Conditional operator for the aggregation for the provided time window  - **rules.metricPattern.prefix:** Prefix pattern for the metric  - **rules.metricPattern.operator:** Operator for matching the metric  &#x60;&#x60;&#x60; curl --request PUT &#39;https://&lt;HOST&gt;/api/events/settings/event-specifications/custom/09876543225&#39; \\ --header &#39;Authorization: apiToken &lt;Token&gt;&#39; \\ --header &#39;Content-Type: application/json&#39; \\ --data-raw &#39;{ \&quot;id\&quot; :\&quot;09876543225\&quot;, \&quot;description\&quot;:\&quot;Event for OpenAPI documentation\&quot;, \&quot;enabled\&quot;:true,\&quot;entityType\&quot;:\&quot;host\&quot;,\&quot;expirationTime\&quot;:\&quot;60000\&quot;,\&quot;name\&quot;:\&quot;Event for OpenAPI documentation\&quot;, \&quot;query\&quot;:&lt;Query&gt;,  \&quot;rules\&quot;:[{\&quot;aggregation\&quot;:\&quot;sum\&quot;,\&quot;conditionOperator\&quot;:\&quot;&gt;\&quot;, \&quot;conditionValue\&quot;:0.1, \&quot;metricName\&quot;:null, \&quot;metricPattern\&quot;:{\&quot;prefix\&quot;:\&quot;fs\&quot;, \&quot;postfix\&quot;:\&quot;free\&quot;, \&quot;operator\&quot;:\&quot;endsWith\&quot;, \&quot;placeholder\&quot;:\&quot;/xvda1\&quot;}, \&quot;rollup\&quot;:null, \&quot;ruleType\&quot;:\&quot;threshold\&quot;, \&quot;severity\&quot;:10, \&quot;window\&quot;:30000}], \&quot;triggering\&quot;:false }&#39; &#x60;&#x60;&#x60; The above example creates a custom event that matches disk devices that end with \&quot;/xvda1\&quot; for the metric \&quot;fs.{device}.free\&quot; for any host in scope.  #### Threshold Rule using fixed metric :  - **rules.conditionOperator:** Conditional operator for the aggregation for the provided time window  - **rules.metricName:** Metric name for the event  &#x60;&#x60;&#x60; curl --request PUT &#39;https://&lt;Host&gt;/api/events/settings/event-specifications/custom/09876543226&#39; \\ --header &#39;Authorization: apiToken &lt;Token&gt;&#39; \\ --header &#39;Content-Type: application/json&#39; \\ --data-raw &#39;{ \&quot;id\&quot; :\&quot;09876543226\&quot;, \&quot;description\&quot;:\&quot;Event for OpenAPI documentation fixed Metric\&quot;, \&quot;enabled\&quot;:true,\&quot;entityType\&quot;:\&quot;host\&quot;,\&quot;expirationTime\&quot;:\&quot;60000\&quot;, \&quot;name\&quot;:\&quot;Event for OpenAPI documentation fixed metric\&quot;,\&quot;rules\&quot;:[{\&quot;aggregation\&quot;:\&quot;sum\&quot;,\&quot;conditionOperator\&quot;:\&quot;&gt;\&quot;, \&quot;conditionValue\&quot;:0.1, \&quot;metricName\&quot;:\&quot;fs./dev/xvda1.free\&quot;,  \&quot;rollup\&quot;:null, \&quot;ruleType\&quot;:\&quot;threshold\&quot;, \&quot;severity\&quot;:10, \&quot;window\&quot;:30000}], \&quot;triggering\&quot;:false }&#39; &#x60;&#x60;&#x60;  #### System Rule:  - **rules.systemRuleId:** Id of the System Rule being set   &#x60;&#x60;&#x60; curl --request PUT &#39;https://&lt;Host&gt;/api/events/settings/event-specifications/custom/09876543227&#39; \\ --header &#39;Authorization: apiToken &lt;Token&gt;&#39; \\ --header &#39;Content-Type: application/json&#39; \\ --data-raw &#39;{ \&quot;id\&quot; :\&quot;09876543227\&quot;, \&quot;description\&quot;:\&quot;Event for OpenAPI documentation System Rule\&quot;, \&quot;enabled\&quot;:true,\&quot;entityType\&quot;:\&quot;any\&quot;,\&quot;expirationTime\&quot;:\&quot;60000\&quot;, \&quot;name\&quot;:\&quot;Event for OpenAPI documentation System Rule\&quot;, \&quot;rules\&quot;:[{\&quot;ruleType\&quot;:\&quot;system\&quot;, \&quot;systemRuleId\&quot;:\&quot;entity.offline\&quot;,\&quot;severity\&quot;:10}], \&quot;triggering\&quot;:false }&#39; &#x60;&#x60;&#x60;  #### Entity Verification Rule:  - **rules.matchingEntityType:** Type of the Entity - **rules.matchingOperator:** Operator for matching the Entity name - **rules.matchingEntityLabel:** Name Pattern for the Entity  &#x60;&#x60;&#x60; curl --request PUT &#39;https://&lt;Host&gt;/api/events/settings/event-specifications/custom/09876543228&#39; \\ --header &#39;Authorization: apiToken &lt;Token&gt;&#39; \\ --header &#39;Content-Type: application/json&#39; \\ --data-raw &#39;{ \&quot;id\&quot; :\&quot;09876543228\&quot;, \&quot;description\&quot;:\&quot;Event for OpenAPI Entity Verification Rule\&quot;, \&quot;enabled\&quot;:true,\&quot;entityType\&quot;:\&quot;host\&quot;,\&quot;expirationTime\&quot;:\&quot;60000\&quot;, \&quot;name\&quot;:\&quot;Event for OpenAPI Entity Verification Rule\&quot;, \&quot;rules\&quot;:[{\&quot;matchingEntityLabel\&quot;:\&quot;test\&quot;, \&quot;matchingEntityType\&quot;:\&quot;jvmRuntimePlatform\&quot;,\&quot;matchingOperator\&quot;:\&quot;startsWith\&quot;,\&quot;offlineDuration\&quot;:1800000,  \&quot;ruleType\&quot;:\&quot;entity_verification\&quot;,\&quot;severity\&quot;: 5}], \&quot;triggering\&quot;:false }&#39; &#x60;&#x60;
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param eventSpecificationId
- * @param customEventSpecification
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param eventSpecificationId
+  - @param customEventSpecification
+
 @return CustomEventSpecificationWithLastUpdated
 */
 func (a *EventSettingsApiService) PutCustomEventSpecification(ctx _context.Context, eventSpecificationId string, customEventSpecification CustomEventSpecification) (CustomEventSpecificationWithLastUpdated, *_nethttp.Response, error) {
@@ -3303,8 +3330,8 @@ func (a *EventSettingsApiService) PutCustomEventSpecification(ctx _context.Conte
 
 /*
 SendTestAlerting Test alerting channel
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param abstractIntegration
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param abstractIntegration
 */
 func (a *EventSettingsApiService) SendTestAlerting(ctx _context.Context, abstractIntegration AbstractIntegration) (*_nethttp.Response, error) {
 	var (
@@ -3382,9 +3409,10 @@ func (a *EventSettingsApiService) SendTestAlerting(ctx _context.Context, abstrac
 /*
 UpdateWebsiteAlertConfig Update Website Alert Config
 This API endpoint updates the Website Alert Configuration.  ## Mandatory Parameters:  - **id:** ID of the website alert config which needs to be updated.  - **name:** Name for the website alert configuration.  - **description:** Description for the website alert configuration.  - **severity:** The severity of the alert when triggered, which is either &#x60;5&#x60; (Warning), or &#x60;10&#x60; (Critical).  - **triggering:** Optional flag to indicate whether also an Incident is triggered or not.  - **websiteId:** Unique ID of the website.  - **tagFilterExpression:** Boolean expression of tag filters to define the scope of relevant website beacons.  - **granularity:** The evaluation granularity used for detection of violations of the defined threshold. In other words, it defines the size of the tumbling window used.  - **rule:** Indicates the type of rule this alert configuration is about.  - **threshold:** Indicates the type of threshold this alert rule is evaluated on.  - **timeThreshold:** Indicates the type of violation of the defined threshold.  - **alertChannelIds:** List of IDs of alert channels defined in Instana.  ## Deprecated Parameters  **tagFilters:** The list of tag filters. It is replaced by **tagFilterExpression**.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param websiteAlertConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param websiteAlertConfig
+
 @return []WebsiteAlertConfigWithMetadata
 */
 func (a *EventSettingsApiService) UpdateWebsiteAlertConfig(ctx _context.Context, id string, websiteAlertConfig WebsiteAlertConfig) ([]WebsiteAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -3481,8 +3509,9 @@ func (a *EventSettingsApiService) UpdateWebsiteAlertConfig(ctx _context.Context,
 
 /*
 UpsertCustomPayloadConfiguration Create / Update Custom Payload Configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param customPayloadConfiguration
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param customPayloadConfiguration
+
 @return []CustomPayloadWithLastUpdated
 */
 func (a *EventSettingsApiService) UpsertCustomPayloadConfiguration(ctx _context.Context, customPayloadConfiguration CustomPayloadConfiguration) ([]CustomPayloadWithLastUpdated, *_nethttp.Response, error) {

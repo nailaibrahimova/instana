@@ -34,10 +34,11 @@ type GetApplicationMetricsOpts struct {
 
 /*
 GetApplicationMetrics Get Application Metrics
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetApplicationMetricsOpts - Optional Parameters:
- * @param "FillTimeSeries" (optional.Bool) -
- * @param "GetApplications" (optional.Interface of GetApplications) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetApplicationMetricsOpts - Optional Parameters:
+  - @param "FillTimeSeries" (optional.Bool) -
+  - @param "GetApplications" (optional.Interface of GetApplications) -
+
 @return ApplicationMetricResult
 */
 func (a *ApplicationMetricsApiService) GetApplicationMetrics(ctx _context.Context, localVarOptionals *GetApplicationMetricsOpts) (ApplicationMetricResult, *_nethttp.Response, error) {
@@ -148,10 +149,11 @@ type GetEndpointsMetricsOpts struct {
 
 /*
 GetEndpointsMetrics Get Endpoint metrics
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetEndpointsMetricsOpts - Optional Parameters:
- * @param "FillTimeSeries" (optional.Bool) -
- * @param "GetEndpoints" (optional.Interface of GetEndpoints) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetEndpointsMetricsOpts - Optional Parameters:
+  - @param "FillTimeSeries" (optional.Bool) -
+  - @param "GetEndpoints" (optional.Interface of GetEndpoints) -
+
 @return EndpointMetricResult
 */
 func (a *ApplicationMetricsApiService) GetEndpointsMetrics(ctx _context.Context, localVarOptionals *GetEndpointsMetricsOpts) (EndpointMetricResult, *_nethttp.Response, error) {
@@ -262,10 +264,11 @@ type GetServicesMetricsOpts struct {
 
 /*
 GetServicesMetrics Get Service metrics
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetServicesMetricsOpts - Optional Parameters:
- * @param "FillTimeSeries" (optional.Bool) -
- * @param "GetServices" (optional.Interface of GetServices) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetServicesMetricsOpts - Optional Parameters:
+  - @param "FillTimeSeries" (optional.Bool) -
+  - @param "GetServices" (optional.Interface of GetServices) -
+
 @return ServiceMetricResult
 */
 func (a *ApplicationMetricsApiService) GetServicesMetrics(ctx _context.Context, localVarOptionals *GetServicesMetricsOpts) (ServiceMetricResult, *_nethttp.Response, error) {

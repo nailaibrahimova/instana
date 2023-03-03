@@ -1,15 +1,15 @@
 module github.com/nailaibrahimova/instana
 
-go 1.17
+go 1.19
 
 require (
 	github.com/antihax/optional v1.0.0
-	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8
+	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45
+
 )
 
 require (
-	github.com/golang/protobuf v1.4.2 // indirect
-	golang.org/x/net v0.0.0-20200822124328-c89045814202 // indirect
-	google.golang.org/appengine v1.6.6 // indirect
-	google.golang.org/protobuf v1.25.0 // indirect
+	github.com/golang/protobuf v1.2.0 // indirect
+	golang.org/x/net v0.0.0-20190108225652-1e06a53dbb7e // indirect
+	google.golang.org/appengine v1.4.0 // indirect
 )

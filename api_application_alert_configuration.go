@@ -30,8 +30,9 @@ type ApplicationAlertConfigurationApiService service
 /*
 CreateApplicationAlertConfig Create Application Alert Config
 This API endpoint creates the Application Alert Configuration.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param applicationAlertConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param applicationAlertConfig
+
 @return []ApplicationAlertConfigWithMetadata
 */
 func (a *ApplicationAlertConfigurationApiService) CreateApplicationAlertConfig(ctx _context.Context, applicationAlertConfig ApplicationAlertConfig) ([]ApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -126,8 +127,8 @@ func (a *ApplicationAlertConfigurationApiService) CreateApplicationAlertConfig(c
 
 /*
 DeleteApplicationAlertConfig Delete Application Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *ApplicationAlertConfigurationApiService) DeleteApplicationAlertConfig(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -209,10 +210,11 @@ type DisableApplicationAlertConfigOpts struct {
 
 /*
 DisableApplicationAlertConfig Disable Application Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *DisableApplicationAlertConfigOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *DisableApplicationAlertConfigOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
+
 @return []ApplicationAlertConfigWithMetadata
 */
 func (a *ApplicationAlertConfigurationApiService) DisableApplicationAlertConfig(ctx _context.Context, id string, localVarOptionals *DisableApplicationAlertConfigOpts) ([]ApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -317,10 +319,11 @@ type EnableApplicationAlertConfigOpts struct {
 
 /*
 EnableApplicationAlertConfig Enable Application Alert Config
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *EnableApplicationAlertConfigOpts - Optional Parameters:
- * @param "Body" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *EnableApplicationAlertConfigOpts - Optional Parameters:
+  - @param "Body" (optional.String) -
+
 @return []ApplicationAlertConfigWithMetadata
 */
 func (a *ApplicationAlertConfigurationApiService) EnableApplicationAlertConfig(ctx _context.Context, id string, localVarOptionals *EnableApplicationAlertConfigOpts) ([]ApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -426,9 +429,10 @@ type FindActiveApplicationAlertConfigsOpts struct {
 /*
 FindActiveApplicationAlertConfigs All Application Alert Configs
 Configs are sorted descending by their created date.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *FindActiveApplicationAlertConfigsOpts - Optional Parameters:
- * @param "ApplicationId" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *FindActiveApplicationAlertConfigsOpts - Optional Parameters:
+  - @param "ApplicationId" (optional.String) -
+
 @return []ApplicationAlertConfigWithMetadata
 */
 func (a *ApplicationAlertConfigurationApiService) FindActiveApplicationAlertConfigs(ctx _context.Context, localVarOptionals *FindActiveApplicationAlertConfigsOpts) ([]ApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -530,10 +534,11 @@ type FindApplicationAlertConfigOpts struct {
 /*
 FindApplicationAlertConfig Get Application Alert Config
 Find a Application Alert Config by ID. This will deliver deleted configs too.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param optional nil or *FindApplicationAlertConfigOpts - Optional Parameters:
- * @param "ValidOn" (optional.Int64) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param optional nil or *FindApplicationAlertConfigOpts - Optional Parameters:
+  - @param "ValidOn" (optional.Int64) -
+
 @return []ApplicationAlertConfigWithMetadata
 */
 func (a *ApplicationAlertConfigurationApiService) FindApplicationAlertConfig(ctx _context.Context, id string, localVarOptionals *FindApplicationAlertConfigOpts) ([]ApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {
@@ -632,8 +637,9 @@ func (a *ApplicationAlertConfigurationApiService) FindApplicationAlertConfig(ctx
 /*
 FindApplicationAlertConfigVersions Get versions of Application Alert Config
 Find all versions of a Application Alert Config by ID. This will deliver deleted configs too. Configs are sorted descending by their created date.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return []ConfigVersion
 */
 func (a *ApplicationAlertConfigurationApiService) FindApplicationAlertConfigVersions(ctx _context.Context, id string) ([]ConfigVersion, *_nethttp.Response, error) {
@@ -729,9 +735,10 @@ func (a *ApplicationAlertConfigurationApiService) FindApplicationAlertConfigVers
 /*
 UpdateApplicationAlertConfig Update Application Alert Config
 This API endpoint updates the Application Alert Configuration.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param applicationAlertConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param applicationAlertConfig
+
 @return []ApplicationAlertConfigWithMetadata
 */
 func (a *ApplicationAlertConfigurationApiService) UpdateApplicationAlertConfig(ctx _context.Context, id string, applicationAlertConfig ApplicationAlertConfig) ([]ApplicationAlertConfigWithMetadata, *_nethttp.Response, error) {

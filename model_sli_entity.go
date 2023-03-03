@@ -12,5 +12,15 @@ package instana
 
 // SliEntity struct for SliEntity
 type SliEntity struct {
-	SliType string `json:"sliType"`
+	SliType                   *string                   `json:"sliType"`
+	ApplicationID             *string                   `json:"applicationId"`
+	ServiceID                 *string                   `json:"serviceId"`
+	EndpointID                *string                   `json:"endpointId"`
+	BoundaryScope             string                    `json:"boundaryScope"`
+	GoodEventFilters          *interface{}              `json:"goodEventFilters"`
+	BadEventFilters           *interface{}              `json:"badEventFilters"`
+	IncludeInternal           bool                      `json:"includeInternal"`
+	IncludeSynthetic          bool                      `json:"includeSynthetic"`
+	GoodEventFilterExpression *SliEventFilterExpression `json:"goodEventFilterExpression"`
+	BadEventFilterExpression  *SliEventFilterExpression `json:"badEventFilterExpression"`
 }

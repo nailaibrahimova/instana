@@ -30,7 +30,8 @@ type UserApiService service
 
 /*
 GetInvitations All pending invitations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []UserResult
 */
 func (a *UserApiService) GetInvitations(ctx _context.Context) ([]UserResult, *_nethttp.Response, error) {
@@ -123,8 +124,9 @@ func (a *UserApiService) GetInvitations(ctx _context.Context) ([]UserResult, *_n
 
 /*
 GetUserById Get single user
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param userId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param userId
+
 @return []UserResult
 */
 func (a *UserApiService) GetUserById(ctx _context.Context, userId string) ([]UserResult, *_nethttp.Response, error) {
@@ -219,7 +221,8 @@ func (a *UserApiService) GetUserById(ctx _context.Context, userId string) ([]Use
 
 /*
 GetUsers All users (without invitations)
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []UserResult
 */
 func (a *UserApiService) GetUsers(ctx _context.Context) ([]UserResult, *_nethttp.Response, error) {
@@ -312,7 +315,8 @@ func (a *UserApiService) GetUsers(ctx _context.Context) ([]UserResult, *_nethttp
 
 /*
 GetUsersIncludingInvitations All users (incl. invitations)
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return UsersResult
 */
 func (a *UserApiService) GetUsersIncludingInvitations(ctx _context.Context) (UsersResult, *_nethttp.Response, error) {
@@ -405,8 +409,8 @@ func (a *UserApiService) GetUsersIncludingInvitations(ctx _context.Context) (Use
 
 /*
 RemoveUserFromTenant Remove user from tenant
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param userId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param userId
 */
 func (a *UserApiService) RemoveUserFromTenant(ctx _context.Context, userId string) (*_nethttp.Response, error) {
 	var (
@@ -488,9 +492,9 @@ type RevokePendingInvitationsOpts struct {
 
 /*
 RevokePendingInvitations Revoke pending invitation
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *RevokePendingInvitationsOpts - Optional Parameters:
- * @param "Email" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *RevokePendingInvitationsOpts - Optional Parameters:
+  - @param "Email" (optional.String) -
 */
 func (a *UserApiService) RevokePendingInvitations(ctx _context.Context, localVarOptionals *RevokePendingInvitationsOpts) (*_nethttp.Response, error) {
 	var (
@@ -574,10 +578,10 @@ type SendInvitationOpts struct {
 
 /*
 SendInvitation Send user invitation
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SendInvitationOpts - Optional Parameters:
- * @param "Email" (optional.Interface of []string) -
- * @param "RoleId" (optional.Interface of []string) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *SendInvitationOpts - Optional Parameters:
+  - @param "Email" (optional.Interface of []string) -
+  - @param "RoleId" (optional.Interface of []string) -
 */
 func (a *UserApiService) SendInvitation(ctx _context.Context, localVarOptionals *SendInvitationOpts) (*_nethttp.Response, error) {
 	var (
@@ -679,10 +683,10 @@ type UpdateUserOpts struct {
 
 /*
 UpdateUser Change user name of single user
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param email
- * @param optional nil or *UpdateUserOpts - Optional Parameters:
- * @param "EditUser" (optional.Interface of EditUser) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param email
+  - @param optional nil or *UpdateUserOpts - Optional Parameters:
+  - @param "EditUser" (optional.Interface of EditUser) -
 */
 func (a *UserApiService) UpdateUser(ctx _context.Context, email string, localVarOptionals *UpdateUserOpts) (*_nethttp.Response, error) {
 	var (

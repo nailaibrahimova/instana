@@ -29,7 +29,8 @@ type ApplicationCatalogApiService service
 /*
 GetApplicationCatalogMetrics Get Metric catalog
 This endpoint retrieves all available metric definitions for application monitoring.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []MetricDescription
 */
 func (a *ApplicationCatalogApiService) GetApplicationCatalogMetrics(ctx _context.Context) ([]MetricDescription, *_nethttp.Response, error) {
@@ -129,11 +130,12 @@ type GetApplicationTagCatalogOpts struct {
 
 /*
 GetApplicationTagCatalog Get application tag catalog
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetApplicationTagCatalogOpts - Optional Parameters:
- * @param "From" (optional.Int64) -
- * @param "DataSource" (optional.String) -
- * @param "UseCase" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetApplicationTagCatalogOpts - Optional Parameters:
+  - @param "From" (optional.Int64) -
+  - @param "DataSource" (optional.String) -
+  - @param "UseCase" (optional.String) -
+
 @return TagCatalog
 */
 func (a *ApplicationCatalogApiService) GetApplicationTagCatalog(ctx _context.Context, localVarOptionals *GetApplicationTagCatalogOpts) (TagCatalog, *_nethttp.Response, error) {
@@ -243,11 +245,12 @@ type GetApplicationTagsOpts struct {
 /*
 GetApplicationTags Get application tags
 This endpoint retrieves all available tags for your monitored system.  These tags can be used to group metric results. &#x60;&#x60;&#x60; \&quot;group\&quot;: {   \&quot;groupbyTag\&quot;: \&quot;service.name\&quot; } &#x60;&#x60;&#x60;  These tags can be used to filter metric results. &#x60;&#x60;&#x60; \&quot;tagFilters\&quot;: [{  \&quot;name\&quot;: \&quot;application.name\&quot;,  \&quot;operator\&quot;: \&quot;EQUALS\&quot;,  \&quot;value\&quot;: \&quot;example\&quot; }] &#x60;&#x60;&#x60;
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetApplicationTagsOpts - Optional Parameters:
- * @param "From" (optional.Int64) -
- * @param "DataSource" (optional.String) -
- * @param "UseCase" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *GetApplicationTagsOpts - Optional Parameters:
+  - @param "From" (optional.Int64) -
+  - @param "DataSource" (optional.String) -
+  - @param "UseCase" (optional.String) -
+
 @return []Tag
 */
 func (a *ApplicationCatalogApiService) GetApplicationTags(ctx _context.Context, localVarOptionals *GetApplicationTagsOpts) ([]Tag, *_nethttp.Response, error) {

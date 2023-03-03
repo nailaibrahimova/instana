@@ -28,8 +28,8 @@ type MaintenanceConfigurationApiService service
 
 /*
 DeleteMaintenanceConfig Delete maintenance configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
 */
 func (a *MaintenanceConfigurationApiService) DeleteMaintenanceConfig(ctx _context.Context, id string) (*_nethttp.Response, error) {
 	var (
@@ -106,8 +106,9 @@ func (a *MaintenanceConfigurationApiService) DeleteMaintenanceConfig(ctx _contex
 
 /*
 GetMaintenanceConfig Maintenance configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+
 @return MaintenanceConfigWithLastUpdated
 */
 func (a *MaintenanceConfigurationApiService) GetMaintenanceConfig(ctx _context.Context, id string) (MaintenanceConfigWithLastUpdated, *_nethttp.Response, error) {
@@ -202,7 +203,8 @@ func (a *MaintenanceConfigurationApiService) GetMaintenanceConfig(ctx _context.C
 
 /*
 GetMaintenanceConfigs All maintenance configurations
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []ValidatedMaintenanceConfigWithStatus
 */
 func (a *MaintenanceConfigurationApiService) GetMaintenanceConfigs(ctx _context.Context) ([]ValidatedMaintenanceConfigWithStatus, *_nethttp.Response, error) {
@@ -295,9 +297,9 @@ func (a *MaintenanceConfigurationApiService) GetMaintenanceConfigs(ctx _context.
 
 /*
 PutMaintenanceConfig Create or update maintenance configuration
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param maintenanceConfig
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id
+  - @param maintenanceConfig
 */
 func (a *MaintenanceConfigurationApiService) PutMaintenanceConfig(ctx _context.Context, id string, maintenanceConfig MaintenanceConfig) (*_nethttp.Response, error) {
 	var (

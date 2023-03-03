@@ -29,7 +29,8 @@ type InfrastructureResourcesApiService service
 
 /*
 GetInfrastructureViewTree Get view tree
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return TreeNodeResult
 */
 func (a *InfrastructureResourcesApiService) GetInfrastructureViewTree(ctx _context.Context) (TreeNodeResult, *_nethttp.Response, error) {
@@ -122,7 +123,8 @@ func (a *InfrastructureResourcesApiService) GetInfrastructureViewTree(ctx _conte
 
 /*
 GetMonitoringState Monitored host count
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return MonitoringState
 */
 func (a *InfrastructureResourcesApiService) GetMonitoringState(ctx _context.Context) (MonitoringState, *_nethttp.Response, error) {
@@ -215,8 +217,9 @@ func (a *InfrastructureResourcesApiService) GetMonitoringState(ctx _context.Cont
 
 /*
 GetRelatedHosts Related hosts
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param snapshotId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param snapshotId
+
 @return []string
 */
 func (a *InfrastructureResourcesApiService) GetRelatedHosts(ctx _context.Context, snapshotId string) ([]string, *_nethttp.Response, error) {
@@ -321,13 +324,14 @@ type SoftwareVersionsOpts struct {
 /*
 SoftwareVersions Get installed software
 Retrieve information about the software you are running. This includes runtime and package manager information.  The &#x60;name&#x60;, &#x60;version&#x60;, &#x60;origin&#x60; and &#x60;type&#x60; parameters are optional filters that can be used to reduce the result data set.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *SoftwareVersionsOpts - Optional Parameters:
- * @param "Time" (optional.Int64) -
- * @param "Origin" (optional.String) -
- * @param "Type_" (optional.String) -
- * @param "Name" (optional.String) -
- * @param "Version" (optional.String) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *SoftwareVersionsOpts - Optional Parameters:
+  - @param "Time" (optional.Int64) -
+  - @param "Origin" (optional.String) -
+  - @param "Type_" (optional.String) -
+  - @param "Name" (optional.String) -
+  - @param "Version" (optional.String) -
+
 @return []SoftwareVersion
 */
 func (a *InfrastructureResourcesApiService) SoftwareVersions(ctx _context.Context, localVarOptionals *SoftwareVersionsOpts) ([]SoftwareVersion, *_nethttp.Response, error) {

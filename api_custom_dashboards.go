@@ -34,9 +34,10 @@ type AddCustomDashboardOpts struct {
 
 /*
 AddCustomDashboard Add custom dashboard
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *AddCustomDashboardOpts - Optional Parameters:
- * @param "CustomDashboard" (optional.Interface of CustomDashboard) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param optional nil or *AddCustomDashboardOpts - Optional Parameters:
+  - @param "CustomDashboard" (optional.Interface of CustomDashboard) -
+
 @return CustomDashboard
 */
 func (a *CustomDashboardsApiService) AddCustomDashboard(ctx _context.Context, localVarOptionals *AddCustomDashboardOpts) (CustomDashboard, *_nethttp.Response, error) {
@@ -138,8 +139,8 @@ func (a *CustomDashboardsApiService) AddCustomDashboard(ctx _context.Context, lo
 
 /*
 DeleteCustomDashboard Remove custom dashboard
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param customDashboardId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param customDashboardId
 */
 func (a *CustomDashboardsApiService) DeleteCustomDashboard(ctx _context.Context, customDashboardId string) (*_nethttp.Response, error) {
 	var (
@@ -216,8 +217,9 @@ func (a *CustomDashboardsApiService) DeleteCustomDashboard(ctx _context.Context,
 
 /*
 GetCustomDashboard Get custom dashboard
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param customDashboardId
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param customDashboardId
+
 @return CustomDashboard
 */
 func (a *CustomDashboardsApiService) GetCustomDashboard(ctx _context.Context, customDashboardId string) (CustomDashboard, *_nethttp.Response, error) {
@@ -312,7 +314,8 @@ func (a *CustomDashboardsApiService) GetCustomDashboard(ctx _context.Context, cu
 
 /*
 GetCustomDashboards Get accessible custom dashboards
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []CustomDashboardPreview
 */
 func (a *CustomDashboardsApiService) GetCustomDashboards(ctx _context.Context) ([]CustomDashboardPreview, *_nethttp.Response, error) {
@@ -367,12 +370,6 @@ func (a *CustomDashboardsApiService) GetCustomDashboards(ctx _context.Context) (
 
 	localVarHTTPResponse, err := a.client.callAPI(r)
 	if err != nil || localVarHTTPResponse == nil {
-		if localVarHTTPResponse == nil {
-			localVarHTTPResponse = &_nethttp.Response{
-				Request: r,
-			}
-		}
-		localVarHTTPResponse.Request = r
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
@@ -411,7 +408,8 @@ func (a *CustomDashboardsApiService) GetCustomDashboards(ctx _context.Context) (
 
 /*
 GetShareableApiTokens Get all API tokens.
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []ApiToken
 */
 func (a *CustomDashboardsApiService) GetShareableApiTokens(ctx _context.Context) ([]ApiToken, *_nethttp.Response, error) {
@@ -504,7 +502,8 @@ func (a *CustomDashboardsApiService) GetShareableApiTokens(ctx _context.Context)
 
 /*
 GetShareableUsers Get all users (without invitations).
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+
 @return []UserResult
 */
 func (a *CustomDashboardsApiService) GetShareableUsers(ctx _context.Context) ([]UserResult, *_nethttp.Response, error) {
@@ -602,10 +601,11 @@ type UpdateCustomDashboardOpts struct {
 
 /*
 UpdateCustomDashboard Update custom dashboard
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param customDashboardId
- * @param optional nil or *UpdateCustomDashboardOpts - Optional Parameters:
- * @param "CustomDashboard" (optional.Interface of CustomDashboard) -
+  - @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param customDashboardId
+  - @param optional nil or *UpdateCustomDashboardOpts - Optional Parameters:
+  - @param "CustomDashboard" (optional.Interface of CustomDashboard) -
+
 @return CustomDashboard
 */
 func (a *CustomDashboardsApiService) UpdateCustomDashboard(ctx _context.Context, customDashboardId string, localVarOptionals *UpdateCustomDashboardOpts) (CustomDashboard, *_nethttp.Response, error) {
