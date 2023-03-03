@@ -7,7 +7,7 @@ type SliEventFilterElement struct {
 	NumberValue  *interface{} `json:"numberValue"`
 	BooleanValue *bool        `json:"booleanValue"`
 	Key          *string      `json:"key"`
-	Value        *string      `json:"value"`
+	Value        *interface{} `json:"value"`
 	Operator     *string      `json:"operator"`
 	Entity       *string      `json:"entity"`
 }
