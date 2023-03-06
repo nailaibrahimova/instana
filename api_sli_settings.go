@@ -34,18 +34,18 @@ This endpoint creates the Service Level Indicator Configuration  ## Mandatory Pa
 
 @return []SliConfigurationWithLastUpdated
 */
-func (a *SLISettingsApiService) CreateSli(ctx _context.Context, sliConfiguration SliConfiguration) ([]SliConfigurationWithLastUpdated, *_nethttp.Response, error) {
+func (a *SLISettingsApiService) CreateSli(ctx _context.Context, sliConfiguration SliConfiguration) (SliConfigurationWithLastUpdated, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  []SliConfigurationWithLastUpdated
+		localVarReturnValue  SliConfigurationWithLastUpdated
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/settings/sli"
+	localVarPath := a.client.cfg.BasePath + "/api/settings/v2/sli"
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
@@ -102,7 +102,7 @@ func (a *SLISettingsApiService) CreateSli(ctx _context.Context, sliConfiguration
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		var v []SliConfigurationWithLastUpdated
+		var v SliConfigurationWithLastUpdated
 		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			newErr.error = err.Error()
@@ -219,7 +219,7 @@ func (a *SLISettingsApiService) GetSli1(ctx _context.Context) ([]SliConfiguratio
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/settings/sli"
+	localVarPath := a.client.cfg.BasePath + "/api/settings/v2/sli"
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
